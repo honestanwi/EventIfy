@@ -1,0 +1,33 @@
+@font-face {
+    font-family: DM Sans ;
+    src: url(../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: SpaceGrotesk ;
+    src: url(../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+        --bg: #09090b;
+        --card: #141418;
+        --primary: #8b5cf6;
+        --primary-soft: rgba(139, 92, 246, 0.15);
+        --accent: #22d3ee;
+        --accent-soft: rgba(34, 211, 238, 0.12);
+        --text: #fafafa;
+        --muted: #a1a1aa;
+        --glass: rgba(255, 255, 255, 0.04);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --glass-strong: rgba(255, 255, 255, 0.07);
+        --radius: 16px;
+        --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+        --header-font: SpaceGrotesk;
+        --body-font: DM Sans;
+      }
