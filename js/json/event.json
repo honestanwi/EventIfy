@@ -1,0 +1,2125 @@
+[
+  {
+    "id": 101,
+    "title": "Cameroon Art Festival",
+    "category": "Arts",
+    "date": "2026-09-05",
+    "time": "10:00 AM",
+    "location": "Yaoundé",
+    "venue": "National Museum",
+    "address": "National Museum, Yaoundé, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/cameroon art festival.jpg",
+    "description": "A celebration of Cameroonian creativity featuring visual artists, painters, sculptors, designers and cultural performers from across the country.",
+    "organizer": "Cameroon Arts & Culture Association",
+    "capacity": 500,
+    "highlights": [
+      "Live art exhibitions",
+      "Local artists showcase",
+      "Cultural performances",
+      "Art workshops",
+      "Meet and connect with artists"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Full event access",
+          "Access to art exhibitions",
+          "Art workshop access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full event access",
+          "Access to all exhibitions",
+          "Art workshop access",
+          "Networking opportunities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP seating",
+          "Exclusive artist meet & greet",
+          "VIP gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "African Contemporary Art Expo",
+    "category": "Arts",
+    "date": "2026-09-12",
+    "time": "11:00 AM",
+    "location": "Douala",
+    "venue": "Doual'art",
+    "address": "Doual'art, Bonanjo, Douala, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/african contemporary.jpg",
+    "description": "An immersive contemporary art exhibition bringing together emerging and established African artists and their unique perspectives.",
+    "organizer": "Doual'art",
+    "capacity": 350,
+    "highlights": [
+      "Contemporary art exhibitions",
+      "Emerging African artists",
+      "Artist discussions",
+      "Creative workshops",
+      "Gallery experience"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Full exhibition access",
+          "Artist showcase access",
+          "Workshop access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full exhibition access",
+          "Artist discussions",
+          "Workshop access",
+          "Networking opportunities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 9000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP gallery access",
+          "Private artist session",
+          "Exclusive art gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Colours of Africa Exhibition",
+    "category": "Arts",
+    "date": "2026-09-19",
+    "time": "9:00 AM",
+    "location": "Buea",
+    "venue": "Alliance Française",
+    "address": "Alliance Française, Buea, Cameroon",
+    "price": 2500,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/colors of africa.jpg",
+    "description": "A vibrant exhibition celebrating African identity, culture and creativity through paintings, photography and mixed-media artworks.",
+    "organizer": "Alliance Française de Buea",
+    "capacity": 300,
+    "highlights": [
+      "African artwork exhibition",
+      "Photography showcase",
+      "Live painting",
+      "Cultural storytelling",
+      "Creative networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Exhibition access",
+          "Live painting sessions"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2500,
+        "benefits": [
+          "Full exhibition access",
+          "Photography showcase",
+          "Cultural storytelling"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 5000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP viewing area",
+          "Artist meet & greet",
+          "Exclusive exhibition souvenir"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Urban Canvas Exhibition",
+    "category": "Arts",
+    "date": "2026-09-25",
+    "time": "2:00 PM",
+    "location": "Douala",
+    "venue": "Bonanjo Art Space",
+    "address": "Bonanjo, Douala, Cameroon",
+    "price": 4000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/Urban canvas.jpg",
+    "description": "An urban art experience exploring street culture, graffiti, digital art and modern African creativity.",
+    "organizer": "Urban Canvas Cameroon",
+    "capacity": 400,
+    "highlights": [
+      "Street art showcase",
+      "Graffiti demonstrations",
+      "Digital art exhibition",
+      "Live painting",
+      "DJ performances"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3000,
+        "benefits": [
+          "Full event access",
+          "Art exhibition access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 4000,
+        "benefits": [
+          "Full event access",
+          "Live painting access",
+          "DJ performances",
+          "Artist networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 8000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP viewing area",
+          "Artist meet & greet",
+          "Exclusive art merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "title": "African Fashion & Design Show",
+    "category": "Arts",
+    "date": "2026-10-03",
+    "time": "6:00 PM",
+    "location": "Yaoundé",
+    "venue": "Hilton Yaoundé",
+    "address": "Hilton Yaoundé, Yaoundé, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/african fashion.jpg",
+    "description": "A premium fashion and design showcase highlighting African designers, models and contemporary fashion inspired by African culture.",
+    "organizer": "Africa Fashion Collective",
+    "capacity": 800,
+    "highlights": [
+      "Fashion runway",
+      "African designers showcase",
+      "Designer collections",
+      "Live performances",
+      "Fashion networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "General runway access",
+          "Fashion showcase access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Premium runway seating",
+          "Designer showcase",
+          "Networking opportunities",
+          "Event gift bag"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 20000,
+        "benefits": [
+          "Front-row seating",
+          "Designer meet & greet",
+          "VIP lounge access",
+          "Exclusive gift package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Heritage Through Art",
+    "category": "Arts",
+    "date": "2026-10-10",
+    "time": "10:00 AM",
+    "location": "Bamenda",
+    "venue": "Bamenda Cultural Centre",
+    "address": "Bamenda Cultural Centre, Bamenda, Cameroon",
+    "price": 2000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/heritage through art.jpg",
+    "description": "An artistic journey through Cameroon's cultural heritage featuring traditional art, crafts, storytelling and performances.",
+    "organizer": "Bamenda Cultural Centre",
+    "capacity": 400,
+    "highlights": [
+      "Traditional art exhibition",
+      "Cultural performances",
+      "Traditional crafts",
+      "Storytelling sessions",
+      "Heritage workshops"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Full event access",
+          "Cultural exhibition access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2000,
+        "benefits": [
+          "Full event access",
+          "Cultural performances",
+          "Heritage workshops"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 5000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP seating",
+          "Private cultural session",
+          "Traditional gift package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Street Art Weekend",
+    "category": "Arts",
+    "date": "2026-10-17",
+    "time": "12:00 PM",
+    "location": "Douala",
+    "venue": "Akwa",
+    "address": "Akwa, Douala, Cameroon",
+    "price": 0,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/street art weekend.jpg",
+    "description": "A free urban celebration bringing street artists, musicians and creatives together for a weekend of live art and entertainment.",
+    "organizer": "Douala Creative Community",
+    "capacity": 1000,
+    "highlights": [
+      "Live graffiti",
+      "Street performances",
+      "DJ sets",
+      "Creative marketplace",
+      "Open art sessions"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Free Pass",
+        "price": 0,
+        "benefits": [
+          "General event access",
+          "Street art performances",
+          "Creative marketplace access"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 5000,
+        "benefits": [
+          "VIP viewing area",
+          "Artist meet & greet",
+          "VIP refreshments",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Photography & Visual Arts Showcase",
+    "category": "Arts",
+    "date": "2026-10-24",
+    "time": "3:00 PM",
+    "location": "Buea",
+    "venue": "Mountain View Hall",
+    "address": "Mountain View Hall, Buea, Cameroon",
+    "price": 3500,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/photography and visual art showcase.jpg",
+    "description": "A visual storytelling event featuring photographers and visual artists showcasing powerful images from Cameroon and Africa.",
+    "organizer": "Buea Visual Arts Collective",
+    "capacity": 300,
+    "highlights": [
+      "Photography exhibition",
+      "Visual art showcase",
+      "Photography talks",
+      "Editing workshops",
+      "Artist networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2500,
+        "benefits": [
+          "Exhibition access",
+          "Photography talks"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3500,
+        "benefits": [
+          "Full exhibition access",
+          "Editing workshop",
+          "Artist networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 7000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP viewing",
+          "Private photographer session",
+          "Photography gift pack"
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 109,
+    "title": "Starr girl concert",
+    "category": "Concert",
+    "date": "2026-09-06",
+    "time": "7:00 PM",
+    "location": "Douala",
+    "venue": "Canal Olympia",
+    "address": "Canal Olympia, Douala, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/Ayra Starr.jpg",
+    "description": "A high-energy Afrobeats concert night featuring live performances, DJs and an unforgettable crowd experience.",
+    "organizer": "Live Nation Cameroon",
+    "capacity": 5000,
+    "highlights": [
+      "Live concert",
+      "DJ performances",
+      "Afrobeats experience",
+      "Food and drinks",
+      "Concert merchandise"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full concert access",
+          "Premium viewing area",
+          "Concert merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 20000,
+        "benefits": [
+          "Front-row access",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "title": "Come see the eagle live",
+    "category": "Concert",
+    "date": "2026-09-13",
+    "time": "5:00 PM",
+    "location": "Yaoundé",
+    "venue": "Palais des Sports",
+    "address": "Palais des Sports, Yaoundé, Cameroon",
+    "price": 15000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/fally.jpg",
+    "description": "A major live music experience bringing fans together for an evening of African music, entertainment and unforgettable performances.",
+    "organizer": "Eagle Entertainment Cameroon",
+    "capacity": 7000,
+    "highlights": [
+      "Live headline performance",
+      "Opening artists",
+      "DJ sets",
+      "Live band",
+      "Concert afterparty"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 12000,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 15000,
+        "benefits": [
+          "Premium concert access",
+          "Better viewing area",
+          "Event merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 30000,
+        "benefits": [
+          "Front-row seating",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive VIP gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "title": "Hip Hop Live Cameroon",
+    "category": "Concert",
+    "date": "2026-09-20",
+    "time": "6:30 PM",
+    "location": "Buea",
+    "venue": "Mountain View Lounge",
+    "address": "Mountain View Lounge, Buea, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/j cole.jpg",
+    "description": "A night dedicated to hip hop culture featuring rappers, DJs, live performances and the best of Cameroon's urban music scene.",
+    "organizer": "Hip Hop Cameroon",
+    "capacity": 1500,
+    "highlights": [
+      "Live rap performances",
+      "DJ battles",
+      "Freestyle sessions",
+      "Cyphers",
+      "Urban culture showcase"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "General event access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full concert access",
+          "DJ performances",
+          "Freestyle sessions"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "VIP seating",
+          "Artist meet & greet",
+          "VIP lounge access",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "title": "NI concert",
+    "category": "Concert",
+    "date": "2026-09-27",
+    "time": "8:00 PM",
+    "location": "Douala",
+    "venue": "Parcours Vita",
+    "address": "Parcours Vita, Douala, Cameroon",
+    "price": 12000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/Ninho📀💿.jpg",
+    "description": "A massive urban music concert featuring live performances, energetic production and a night of contemporary African sounds.",
+    "organizer": "Urban Live Cameroon",
+    "capacity": 6000,
+    "highlights": [
+      "Headline concert",
+      "Opening performances",
+      "DJ sets",
+      "Live production",
+      "VIP experience"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 9000,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 12000,
+        "benefits": [
+          "Premium concert access",
+          "Better viewing area",
+          "Concert merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 25000,
+        "benefits": [
+          "Front-row access",
+          "VIP lounge",
+          "Artist meet & greet",
+          "VIP gift package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "title": "R&B Soul Experience",
+    "category": "Concert",
+    "date": "2026-10-04",
+    "time": "7:00 PM",
+    "location": "Yaoundé",
+    "venue": "French Institute",
+    "address": "French Institute, Yaoundé, Cameroon",
+    "price": 8000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/Rema .jpg",
+    "description": "An intimate evening celebrating R&B, soul and Afro-soul music with live vocals and soulful performances.",
+    "organizer": "Soul Sessions Cameroon",
+    "capacity": 1200,
+    "highlights": [
+      "Live R&B performances",
+      "Soul music",
+      "Acoustic performances",
+      "Live band",
+      "Intimate atmosphere"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 6000,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 8000,
+        "benefits": [
+          "Premium seating",
+          "Live band performance",
+          "Concert souvenir"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 15000,
+        "benefits": [
+          "Front-row seating",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "title": "Acoustic Night",
+    "category": "Concert",
+    "date": "2026-10-11",
+    "time": "4:00 PM",
+    "location": "Bamenda",
+    "venue": "Commercial Avenue Hall",
+    "address": "Commercial Avenue, Bamenda, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/tayc.jpg",
+    "description": "A relaxed acoustic music evening featuring talented vocalists, guitarists and musicians performing stripped-back versions of popular songs.",
+    "organizer": "Bamenda Music Collective",
+    "capacity": 800,
+    "highlights": [
+      "Acoustic performances",
+      "Live guitar",
+      "Singer-songwriter sessions",
+      "Open mic",
+      "Local artists"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "General seating",
+          "Live acoustic performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Premium seating",
+          "Open mic access",
+          "Event souvenir"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "Front-row seating",
+          "Artist meet & greet",
+          "VIP refreshments",
+          "Exclusive gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "title": "Tems Concert",
+    "category": "Concert",
+    "date": "2026-10-18",
+    "time": "7:30 PM",
+    "location": "Limbe",
+    "venue": "Botanic Garden",
+    "address": "Limbe Botanic Garden, Limbe, Cameroon",
+    "price": 7500,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/tems.jpg",
+    "description": "An outdoor music experience combining Afrobeats, R&B and soulful sounds in the beautiful atmosphere of Limbe.",
+    "organizer": "Coastal Entertainment",
+    "capacity": 4000,
+    "highlights": [
+      "Outdoor concert",
+      "Live performances",
+      "DJ sets",
+      "Food vendors",
+      "Coastal music experience"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 5500,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 7500,
+        "benefits": [
+          "Premium viewing area",
+          "Full concert access",
+          "Event merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 15000,
+        "benefits": [
+          "VIP viewing area",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "title": "Afro-Fusion Festival",
+    "category": "Concert",
+    "date": "2026-10-25",
+    "time": "6:00 PM",
+    "location": "Kribi",
+    "venue": "Beachfront Arena",
+    "address": "Beachfront Arena, Kribi, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/Wizkid.jpg",
+    "description": "A beachside celebration of African music, culture and entertainment featuring multiple performers and a festival atmosphere.",
+    "organizer": "Afro-Fusion Cameroon",
+    "capacity": 6000,
+    "highlights": [
+      "Live music festival",
+      "Beach party",
+      "Multiple artists",
+      "DJ performances",
+      "Food and lifestyle vendors"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "Festival access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full festival access",
+          "Premium viewing area",
+          "Festival merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 20000,
+        "benefits": [
+          "VIP beach area",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive festival package"
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 117,
+    "title": "Cameroon Premier League Match",
+    "category": "Sports",
+    "date": "2026-09-07",
+    "time": "4:00 PM",
+    "location": "Yaoundé",
+    "venue": "Ahmadou Ahidjo Stadium",
+    "address": "Ahmadou Ahidjo Stadium, Yaoundé, Cameroon",
+    "price": 2000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/cameroon premiere.jpg",
+    "description": "Experience the excitement of live top-flight Cameroonian football with passionate fans and competitive action.",
+    "organizer": "Cameroon Football Federation",
+    "capacity": 5000,
+    "highlights": [
+      "Live football match",
+      "Stadium experience",
+      "Fan activities",
+      "Food vendors",
+      "Match-day entertainment"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "General stadium access",
+          "Match viewing"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2000,
+        "benefits": [
+          "Premium seating",
+          "Match viewing",
+          "Fan activities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 5000,
+        "benefits": [
+          "VIP seating",
+          "VIP entrance",
+          "Hospitality area",
+          "Match-day gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "title": "Buea Mountain Race",
+    "category": "Sports",
+    "date": "2026-09-14",
+    "time": "6:00 AM",
+    "location": "Buea",
+    "venue": "Molyko Stadium",
+    "address": "Molyko Stadium, Buea, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/view of mount Cameroon 4100m.jpg",
+    "description": "A challenging mountain race bringing runners together for an exciting outdoor sporting experience around Mount Cameroon.",
+    "organizer": "Buea Mountain Sports Association",
+    "capacity": 1000,
+    "highlights": [
+      "Mountain race",
+      "Professional timing",
+      "Runner support stations",
+      "Medals and awards",
+      "Fitness activities"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 4000,
+        "benefits": [
+          "Race registration",
+          "Race bib",
+          "Water station access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Race registration",
+          "Race bib",
+          "Finisher medal",
+          "Refreshments"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "Priority registration",
+          "VIP race kit",
+          "Premium refreshments",
+          "Exclusive race merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "title": "Cameroon Basketball Championship",
+    "category": "Sports",
+    "date": "2026-09-21",
+    "time": "3:00 PM",
+    "location": "Yaoundé",
+    "venue": "Palais des Sports",
+    "address": "Palais des Sports, Yaoundé, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/cameroon basketball.jpg",
+    "description": "A live basketball championship match featuring some of Cameroon's strongest teams competing for victory.",
+    "organizer": "Cameroon Basketball Federation",
+    "capacity": 4000,
+    "highlights": [
+      "Live basketball",
+      "Championship match",
+      "Half-time entertainment",
+      "Fan activities",
+      "Food vendors"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "General seating",
+          "Match access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Premium seating",
+          "Match access",
+          "Fan activities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 7000,
+        "benefits": [
+          "VIP seating",
+          "Priority entrance",
+          "Hospitality access",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "title": "Douala City Marathon",
+    "category": "Sports",
+    "date": "2026-09-28",
+    "time": "6:30 AM",
+    "location": "Douala",
+    "venue": "Bonanjo",
+    "address": "Bonanjo, Douala, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/Marathon.jpg",
+    "description": "A city-wide marathon bringing together professional runners, fitness enthusiasts and community participants.",
+    "organizer": "Douala Sports Association",
+    "capacity": 2000,
+    "highlights": [
+      "City marathon",
+      "Professional timing",
+      "Medical support",
+      "Refreshment stations",
+      "Finisher medals"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 4000,
+        "benefits": [
+          "Race registration",
+          "Race bib",
+          "Refreshment access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Race registration",
+          "Race bib",
+          "Finisher medal",
+          "Race shirt"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "Priority registration",
+          "VIP race kit",
+          "Premium refreshments",
+          "VIP recovery area"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "title": "Beach Volleyball Open",
+    "category": "Sports",
+    "date": "2026-10-05",
+    "time": "9:00 AM",
+    "location": "Kribi",
+    "venue": "Kribi Beach",
+    "address": "Kribi Beach, Kribi, Cameroon",
+    "price": 2500,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/Volleyball.jpg",
+    "description": "An exciting beach volleyball tournament featuring competitive matches in a relaxed coastal setting.",
+    "organizer": "Cameroon Beach Sports",
+    "capacity": 800,
+    "highlights": [
+      "Beach volleyball",
+      "Tournament matches",
+      "Live DJ",
+      "Beach activities",
+      "Food and drinks"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Beach event access",
+          "Match viewing"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2500,
+        "benefits": [
+          "Premium viewing",
+          "Beach activities",
+          "Event merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "VIP beach seating",
+          "VIP refreshments",
+          "Priority access",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "title": "University Football Cup",
+    "category": "Sports",
+    "date": "2026-10-12",
+    "time": "2:00 PM",
+    "location": "Buea",
+    "venue": "Molyko Stadium",
+    "address": "Molyko Stadium, Buea, Cameroon",
+    "price": 1000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/cameroon women.jpg",
+    "description": "A competitive university football tournament bringing student teams together for an exciting day of football.",
+    "organizer": "Cameroon University Sports Association",
+    "capacity": 3000,
+    "highlights": [
+      "University football",
+      "Multiple teams",
+      "Student fan activities",
+      "Live entertainment",
+      "Awards ceremony"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 500,
+        "benefits": [
+          "General stadium access",
+          "Match viewing"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 1000,
+        "benefits": [
+          "Premium seating",
+          "All tournament matches",
+          "Fan activities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 3000,
+        "benefits": [
+          "VIP seating",
+          "Priority entrance",
+          "Hospitality access",
+          "Tournament souvenir"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "title": "Fitness & Wellness Challenge",
+    "category": "Sports",
+    "date": "2026-10-19",
+    "time": "7:00 AM",
+    "location": "Yaoundé",
+    "venue": "Parcours Vita",
+    "address": "Parcours Vita, Yaoundé, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/Personal Training Services in Chicago IL _ 360 Vitality Fitness.jpg",
+    "description": "A community fitness event combining workouts, challenges and wellness activities for people of different fitness levels.",
+    "organizer": "Fit Cameroon",
+    "capacity": 1000,
+    "highlights": [
+      "Group workouts",
+      "Fitness challenges",
+      "Wellness sessions",
+      "Trainer guidance",
+      "Healthy lifestyle activities"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Challenge access",
+          "Workout sessions"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full event access",
+          "Trainer sessions",
+          "Fitness challenge",
+          "Refreshments"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "Personal trainer session",
+          "VIP fitness kit",
+          "Premium refreshments",
+          "Wellness gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "title": "Tennis Open Cameroon",
+    "category": "Sports",
+    "date": "2026-10-26",
+    "time": "10:00 AM",
+    "location": "Douala",
+    "venue": "Douala Tennis Club",
+    "address": "Douala Tennis Club, Douala, Cameroon",
+    "price": 4000,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/tennis.jpg",
+    "description": "A competitive tennis tournament featuring talented players and exciting matches throughout the day.",
+    "organizer": "Cameroon Tennis Federation",
+    "capacity": 700,
+    "highlights": [
+      "Tennis matches",
+      "Tournament competition",
+      "Player showcases",
+      "Awards ceremony",
+      "Sports networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3000,
+        "benefits": [
+          "Tournament access",
+          "Match viewing"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 4000,
+        "benefits": [
+          "Premium seating",
+          "All-day match access",
+          "Tournament program"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 8000,
+        "benefits": [
+          "VIP seating",
+          "Priority entrance",
+          "Player meet & greet",
+          "VIP refreshments"
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 125,
+    "title": "Cameroon Tech Summit",
+    "category": "Tech",
+    "date": "2026-09-08",
+    "time": "9:00 AM",
+    "location": "Yaoundé",
+    "venue": "Palais des Congrès",
+    "address": "Palais des Congrès, Yaoundé, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/AfroTech Inspires African-American Millennials.jpg",
+    "description": "A technology summit bringing developers, entrepreneurs, students and technology leaders together to explore the future of Africa's digital economy.",
+    "organizer": "Cameroon Tech Community",
+    "capacity": 1500,
+    "highlights": [
+      "Tech talks",
+      "Developer sessions",
+      "Startup showcase",
+      "Networking",
+      "Technology demonstrations"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Full summit access",
+          "Keynote sessions",
+          "Networking opportunities"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full summit access",
+          "Technical sessions",
+          "Startup showcase",
+          "Networking opportunities",
+          "Event swag bag"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Front-row seating",
+          "VIP networking lounge",
+          "Speaker meet & greet",
+          "VIP gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "title": "Build With AI Cameroon",
+    "category": "Tech",
+    "date": "2026-09-15",
+    "time": "10:00 AM",
+    "location": "Buea",
+    "venue": "UBa Innovation Hub",
+    "address": "UBa Innovation Hub, Buea, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Join us tomorrow at GDG Cloud Abuja for 3 highly….jpg",
+    "description": "A practical technology event focused on artificial intelligence, development tools and building real-world AI-powered solutions.",
+    "organizer": "Cameroon AI Community",
+    "capacity": 500,
+    "highlights": [
+      "AI workshops",
+      "Hands-on coding",
+      "AI demonstrations",
+      "Developer networking",
+      "Project showcase"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Event access",
+          "AI talks",
+          "Workshop access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full event access",
+          "Hands-on workshops",
+          "Networking",
+          "Event resources"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 7000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Priority workshop access",
+          "Speaker networking",
+          "VIP gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "title": "Women in Tech Cameroon",
+    "category": "Tech",
+    "date": "2026-09-22",
+    "time": "9:30 AM",
+    "location": "Douala",
+    "venue": "ActivSpaces",
+    "address": "ActivSpaces, Douala, Cameroon",
+    "price": 2500,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Les jeunes femmes africaines se tournent vers le codage.jpg",
+    "description": "A community-focused technology event celebrating women in technology and creating opportunities for learning, mentorship and networking.",
+    "organizer": "Women in Tech Cameroon",
+    "capacity": 400,
+    "highlights": [
+      "Women in tech talks",
+      "Mentorship sessions",
+      "Career discussions",
+      "Networking",
+      "Coding workshops"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Event access",
+          "Tech talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2500,
+        "benefits": [
+          "Full event access",
+          "Mentorship sessions",
+          "Coding workshops",
+          "Networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Private mentorship session",
+          "VIP networking",
+          "Exclusive gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "title": "Web Development Bootcamp",
+    "category": "Tech",
+    "date": "2026-09-29",
+    "time": "8:00 AM",
+    "location": "Buea",
+    "venue": "Silicon Mountain",
+    "address": "Silicon Mountain, Buea, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Bootcamp flyer Design.jpg",
+    "description": "An intensive web development bootcamp designed to help participants build practical frontend and backend development skills.",
+    "organizer": "Silicon Mountain Community",
+    "capacity": 300,
+    "highlights": [
+      "HTML and CSS",
+      "JavaScript development",
+      "Frontend projects",
+      "Backend introduction",
+      "Developer networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "Bootcamp access",
+          "Learning materials",
+          "Workshop sessions"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full bootcamp access",
+          "Learning materials",
+          "Practical projects",
+          "Certificate of participation"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 18000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Mentor sessions",
+          "Priority support",
+          "Developer resource pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "title": "Cybersecurity Africa Meetup",
+    "category": "Tech",
+    "date": "2026-10-06",
+    "time": "2:00 PM",
+    "location": "Yaoundé",
+    "venue": "Tech Hub Yaoundé",
+    "address": "Tech Hub Yaoundé, Yaoundé, Cameroon",
+    "price": 4000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Africa Tech Summit Nairobi 27'.jpg",
+    "description": "A cybersecurity community meetup exploring modern security challenges, ethical hacking, digital privacy and cyber defense.",
+    "organizer": "Cybersecurity Cameroon",
+    "capacity": 350,
+    "highlights": [
+      "Cybersecurity talks",
+      "Ethical hacking discussions",
+      "Security demonstrations",
+      "Career networking",
+      "Q&A sessions"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2500,
+        "benefits": [
+          "Meetup access",
+          "Security talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 4000,
+        "benefits": [
+          "Full meetup access",
+          "Security demonstrations",
+          "Q&A sessions",
+          "Networking opportunities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 8000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Private security session",
+          "Speaker networking",
+          "Cybersecurity resource pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "title": "Startup & Innovation Day",
+    "category": "Tech",
+    "date": "2026-10-13",
+    "time": "9:00 AM",
+    "location": "Douala",
+    "venue": "Best Western Hotel",
+    "address": "Best Western Hotel, Douala, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Be Audacious! #citscm #mountainhub #cameroon🇨🇲….jpg",
+    "description": "A day dedicated to startups, entrepreneurs and innovators looking to connect, learn and showcase new ideas.",
+    "organizer": "Cameroon Startup Network",
+    "capacity": 700,
+    "highlights": [
+      "Startup pitches",
+      "Innovation showcase",
+      "Entrepreneur talks",
+      "Investor networking",
+      "Business workshops"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Event access",
+          "Startup showcase",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full event access",
+          "Startup pitches",
+          "Business workshops",
+          "Networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Investor networking lounge",
+          "Priority seating",
+          "VIP gift package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "title": "Mobile App Development Conference",
+    "category": "Tech",
+    "date": "2026-10-20",
+    "time": "10:00 AM",
+    "location": "Bamenda",
+    "venue": "University of Bamenda",
+    "address": "University of Bamenda, Bamenda, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Tech Conference ‘Moonshot by TechCabal 2024’ Returns to Lagos.jpg",
+    "description": "A developer-focused conference exploring mobile application development, modern frameworks, design and deployment.",
+    "organizer": "Bamenda Developer Community",
+    "capacity": 500,
+    "highlights": [
+      "Mobile development talks",
+      "Flutter and React Native",
+      "App design",
+      "Development workshops",
+      "Developer networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Conference access",
+          "Developer talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full conference access",
+          "Technical workshops",
+          "Learning resources",
+          "Networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 7000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Speaker meet & greet",
+          "Priority workshop access",
+          "Developer gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "title": "Cloud & DevOps Africa",
+    "category": "Tech",
+    "date": "2026-10-27",
+    "time": "9:00 AM",
+    "location": "Yaoundé",
+    "venue": "Djeuga Palace",
+    "address": "Djeuga Palace, Yaoundé, Cameroon",
+    "price": 7500,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Streamline your software delivery lifecycle with….jpg",
+    "description": "A technology conference focused on cloud infrastructure, DevOps practices, automation and modern software delivery.",
+    "organizer": "Cloud Africa Community",
+    "capacity": 800,
+    "highlights": [
+      "Cloud computing talks",
+      "DevOps workshops",
+      "CI/CD demonstrations",
+      "Cloud security",
+      "Industry networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 5500,
+        "benefits": [
+          "Conference access",
+          "Keynote sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 7500,
+        "benefits": [
+          "Full conference access",
+          "DevOps workshops",
+          "Technical sessions",
+          "Event swag bag"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 15000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking lounge",
+          "Speaker meet & greet",
+          "Premium resource pack"
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 133,
+    "title": "Africa Business Conference",
+    "category": "Conference",
+    "date": "2026-09-09",
+    "time": "9:00 AM",
+    "location": "Douala",
+    "venue": "Akwa Palace",
+    "address": "Akwa Palace, Douala, Cameroon",
+    "price": 15000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/GAME CHANGER_ TEF2017 Hosts The Most Diverse___.jpg",
+    "description": "A business conference bringing together entrepreneurs, business leaders and professionals to discuss opportunities across Africa.",
+    "organizer": "Africa Business Network",
+    "capacity": 1000,
+    "highlights": [
+      "Business keynote sessions",
+      "Entrepreneurship talks",
+      "Business networking",
+      "Panel discussions",
+      "Investment opportunities"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 10000,
+        "benefits": [
+          "Conference access",
+          "Keynote sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 15000,
+        "benefits": [
+          "Full conference access",
+          "Panel discussions",
+          "Networking opportunities",
+          "Conference materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 30000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking lounge",
+          "Executive meet & greet",
+          "Premium conference package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "title": "Youth Leadership Summit",
+    "category": "Conference",
+    "date": "2026-09-16",
+    "time": "10:00 AM",
+    "location": "Yaoundé",
+    "venue": "Hilton Yaoundé",
+    "address": "Hilton Yaoundé, Yaoundé, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/AfroTech Inspires African-American Millennials.jpg",
+    "description": "A leadership summit designed to inspire young people through leadership talks, mentorship, networking and personal development.",
+    "organizer": "Young Leaders Cameroon",
+    "capacity": 800,
+    "highlights": [
+      "Leadership talks",
+      "Mentorship",
+      "Youth networking",
+      "Career development",
+      "Panel discussions"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Summit access",
+          "Leadership sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full summit access",
+          "Mentorship sessions",
+          "Career workshops",
+          "Event materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP mentorship session",
+          "Speaker meet & greet",
+          "VIP gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "title": "Women Empowerment Conference",
+    "category": "Conference",
+    "date": "2026-09-23",
+    "time": "9:00 AM",
+    "location": "Buea",
+    "venue": "Mountain Hotel",
+    "address": "Mountain Hotel, Buea, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/Namibia Business Presentation - the room was full….jpg",
+    "description": "A conference focused on empowering women through entrepreneurship, leadership, career development and community building.",
+    "organizer": "Women Empowerment Cameroon",
+    "capacity": 600,
+    "highlights": [
+      "Women leadership talks",
+      "Entrepreneurship sessions",
+      "Career development",
+      "Mentorship",
+      "Networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Conference access",
+          "Leadership talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full conference access",
+          "Mentorship sessions",
+          "Career workshops",
+          "Conference materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Private mentorship",
+          "VIP networking",
+          "Exclusive gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "title": "Digital Africa Conference",
+    "category": "Conference",
+    "date": "2026-09-30",
+    "time": "8:30 AM",
+    "location": "Yaoundé",
+    "venue": "Palais des Congrès",
+    "address": "Palais des Congrès, Yaoundé, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/What if AI isn’t here to replace us but to create….jpg",
+    "description": "A conference exploring Africa's digital transformation, emerging technologies, artificial intelligence and the future of work.",
+    "organizer": "Digital Africa Network",
+    "capacity": 1500,
+    "highlights": [
+      "Digital transformation",
+      "AI discussions",
+      "Technology panels",
+      "Innovation showcase",
+      "Business networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "Conference access",
+          "Keynote sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full conference access",
+          "Technology panels",
+          "Innovation showcase",
+          "Conference materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 20000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking lounge",
+          "Speaker meet & greet",
+          "Premium gift package"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "title": "Creative Entrepreneurship Forum",
+    "category": "Conference",
+    "date": "2026-10-07",
+    "time": "9:30 AM",
+    "location": "Douala",
+    "venue": "La Falaise Hotel",
+    "address": "La Falaise Hotel, Douala, Cameroon",
+    "price": 7500,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/AfroTech Inspires African-American Millennials.jpg",
+    "description": "A forum connecting creative professionals and entrepreneurs to explore how creative ideas can become sustainable businesses.",
+    "organizer": "Creative Cameroon Network",
+    "capacity": 600,
+    "highlights": [
+      "Creative business talks",
+      "Entrepreneur panels",
+      "Brand building",
+      "Networking",
+      "Business workshops"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 5500,
+        "benefits": [
+          "Forum access",
+          "Business talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 7500,
+        "benefits": [
+          "Full forum access",
+          "Business workshops",
+          "Panel discussions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 15000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking",
+          "Private business session",
+          "Creative resource pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "title": "Future of Education Summit",
+    "category": "Conference",
+    "date": "2026-10-14",
+    "time": "10:00 AM",
+    "location": "Bamenda",
+    "venue": "University of Bamenda",
+    "address": "University of Bamenda, Bamenda, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/The Future of Education_ What’s Next_.jpg",
+    "description": "A summit bringing educators, students, technology professionals and education leaders together to discuss the future of learning.",
+    "organizer": "Education Futures Cameroon",
+    "capacity": 700,
+    "highlights": [
+      "Education technology",
+      "Teacher discussions",
+      "Future of learning",
+      "Student panels",
+      "Innovation showcase"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Summit access",
+          "Keynote sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full summit access",
+          "Panel discussions",
+          "Education workshops",
+          "Event materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 7000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking",
+          "Speaker meet & greet",
+          "Education resource pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "title": "Sustainable Africa Forum",
+    "category": "Conference",
+    "date": "2026-10-21",
+    "time": "9:00 AM",
+    "location": "Limbe",
+    "venue": "Limbe Conference Centre",
+    "address": "Limbe Conference Centre, Limbe, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/𝐒𝐡𝐚𝐩𝐢𝐧𝐠 𝐀𝐟𝐫𝐢𝐜𝐚’𝐬 𝐏𝐚𝐲𝐦𝐞𝐧𝐭….jpg",
+    "description": "A sustainability-focused forum discussing environmental solutions, climate action and sustainable development across Africa.",
+    "organizer": "Sustainable Africa Initiative",
+    "capacity": 600,
+    "highlights": [
+      "Sustainability talks",
+      "Climate discussions",
+      "Environmental innovation",
+      "Expert panels",
+      "Networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Forum access",
+          "Expert talks",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full forum access",
+          "Panel discussions",
+          "Innovation showcase",
+          "Conference materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking",
+          "Expert meet & greet",
+          "Sustainability gift pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "title": "African Business & Innovation Forum",
+    "category": "Conference",
+    "date": "2026-10-28",
+    "time": "9:00 AM",
+    "location": "Douala",
+    "venue": "Best Western Hotel",
+    "address": "Best Western Hotel, Douala, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/Stronger together_ AfDB and Japan deepen___.jpg",
+    "description": "A business and innovation forum connecting African entrepreneurs, investors, innovators and business leaders.",
+    "organizer": "African Innovation Network",
+    "capacity": 900,
+    "highlights": [
+      "Business keynote sessions",
+      "Innovation showcase",
+      "Startup pitches",
+      "Investor networking",
+      "Expert panels"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "Forum access",
+          "Keynote sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full forum access",
+          "Startup pitches",
+          "Innovation showcase",
+          "Networking",
+          "Conference materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 20000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP networking lounge",
+          "Investor meet & greet",
+          "Priority seating",
+          "VIP gift package"
+        ]
+      }
+    ]
+  }
+]

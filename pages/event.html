@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/event.css" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+    <script defer src="../js/index.js"></script>
+    <script defer src="../js/event.js"></script>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <div class="nav-inner">
+        <div class="logo">
+          <div class="logo-img"></div>
+          <h4>Event <span>Ify</span></h4>
+        </div>
+
+        <button
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+
+        <ul id="menu">
+          <li class="list" class="active"><a href="../index.html">Home</a></li>
+          <li class="list"><a href="event.html">Events</a></li>
+          <li class="list"><a href="booking.html">Booking</a></li>
+          <li class="list">
+            <a class="ghost-btn" href="registration.html">Registration</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-head">
+          Be There. Be Part of it, with
+          <h4 class="logo-text">Event <span>Ify</span></h4>
+        </h1>
+        <p>Feel the pulse, share the energy, and be part of something bigger</p>
+      </div>
+      <div class="search-section">
+        <div class="search-bar">
+          <span class="search-icon">
+            <img
+              src="../assets/images/svg/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </span>
+
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search events, artists, or venues..."
+          />
+
+          <div class="search-divider"></div>
+
+          <select id="city-filter" class="search-select">
+            <option value="all">Any city</option>
+          </select>
+
+          <div class="search-divider"></div>
+
+          <select id="date-filter" class="search-select">
+            <option value="all">Any Date</option>
+          </select>
+
+          <button id="search-btn" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-cards">
+      <div class="cards">
+        <div id="art-cards"></div>
+        <div id="concert-cards"></div>
+        <div id="sport-cards"></div>
+        <div id="tech-cards"></div>
+        <div id="conference-cards"></div>
+        <!-- <div class="art-cards"></div> -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-img"></div>
+            <h4>Event <span>Ify</span></h4>
+          </div>
+          <p>
+            The modern platform for discovering and booking experiences that
+            matter.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="event.html">Events near you</a></li>
+            <li><a href="event.html">Trending</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <div class="socials-links">
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/instagram-icon.svg"
+                  alt="instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/facebook-icon.svg"
+                  alt="facebook"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/X (formerly Twitter)_light.svg"
+                  alt="X"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Eventify. All rights reserved.</span>
+        <span>Privacy · Terms · Cookies</span>
+      </div>
+
+      <h1 class="ghost">EVENT IFY</h1>
+    </footer>
+  </body>
+</html>
