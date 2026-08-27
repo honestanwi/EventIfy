@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/event.css" />
     <link rel="stylesheet" href="../css/nav-footer.css" />
     <link rel="stylesheet" href="../css/event-detail.css" />
+    <!-- <link rel="stylesheet" href="../css/cards.css" /> -->
     <script defer src="../js/index.js"></script>
     <script defer src="../js/event.js"></script>
     <script defer src="../js/event-details.js"></script>
@@ -41,6 +42,92 @@
         </ul>
       </div>
     </nav>
+
+    <main class="event-details">
+      <a href="event.html" class="back-link"> ← Back to events </a>
+
+      <!-- HERO -->
+      <section class="event-hero">
+        <div class="event-image-container">
+          <img id="event-image" src="" alt="" />
+        </div>
+
+        <div class="event-summary">
+          <span id="event-category" class="event-category"></span>
+
+          <h1 id="event-title"></h1>
+
+          <div class="event-info">
+            <div class="info-item">
+              <span>📅</span>
+              <div>
+                <small>Date</small>
+                <p id="event-date"></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span>🕐</span>
+              <div>
+                <small>Time</small>
+                <p id="event-time"></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span>📍</span>
+              <div>
+                <small>Location</small>
+                <p id="event-location"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENT CONTENT -->
+      <section class="event-content">
+        <div class="event-main">
+          <section class="about-event">
+            <h2>About this event</h2>
+
+            <p id="event-description"></p>
+          </section>
+
+          <section class="highlights">
+            <h2>Highlights</h2>
+
+            <ul id="event-highlights"></ul>
+          </section>
+
+          <section class="organizer">
+            <h2>Organizer</h2>
+
+            <div class="organizer-info">
+              <div class="organizer-avatar"></div>
+
+              <div>
+                <h3 id="event-organizer"></h3>
+                <p>Event Organizer</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- TICKET CARD -->
+        <section class="ticket-types">
+          <h2>Choose your ticket</h2>
+          <div id="ticket-types-grid" class="ticket-types-grid"></div>
+        </section>
+      </section>
+
+      <section class="similar-events">
+        <h2>Similar Events</h2>
+        <div class="cards">
+          <div id="similar-events"></div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footer-inner">

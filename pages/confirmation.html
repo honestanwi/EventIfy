@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Confirmed — Eventify</title>
+    <link rel="stylesheet" href="../css/confirmation.css" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+    <script defer src="../js/index.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    ></script>
+    <script defer src="../js/confirmation.js"></script>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <div class="nav-inner">
+        <div class="logo">
+          <div class="logo-img"></div>
+          <h4>Event <span>Ify</span></h4>
+        </div>
+
+        <button
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+
+        <ul id="menu">
+          <li class="list" class="active"><a href="../index.html">Home</a></li>
+          <li class="list"><a href="event.html">Events</a></li>
+          <li class="list"><a href="booking.html">Booking</a></li>
+          <li class="list">
+            <a class="ghost-btn" href="registration.html">Registration</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="confirm-section">
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-pink"></div>
+        <div class="glow glow-blue"></div>
+
+        <!-- Shown if someone lands here with no registration in storage -->
+        <div class="empty-state" id="emptyState" hidden>
+          <h1>No booking found</h1>
+          <p>We couldn't find a recent registration on this device.</p>
+          <a class="ghost-btn" href="registration.html">Register now</a>
+        </div>
+
+        <div id="confirmationContent">
+          <div class="confirm-content">
+            <div class="confirm-left">
+              <div class="success-icon">✓</div>
+
+              <h1>Booking confirmed<br />successfully!</h1>
+
+              <p id="summaryText">
+                Thank you for registering with Eventify! Your reservation is
+                confirmed.
+              </p>
+
+              <div class="confirm-actions">
+                <a class="btn-link" href="../index.html">Go back to home</a>
+              </div>
+            </div>
+
+            <div class="confirm-right">
+              <!-- Receipt: proof of payment. Stays here regardless of how
+                 many tickets/attendees the booking covers. -->
+              <div class="receipt-card" id="receiptCard">
+                <span class="category-badge" id="categoryBadge"
+                  >Conference</span
+                >
+
+                <div class="ticket-amount-row">
+                  <div>
+                    <div class="ticket-amount" id="amountDisplay">$0.00</div>
+                    <div class="ticket-amount-label">Payment success!</div>
+                  </div>
+                  <div class="ticket-check">✓</div>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-section">
+                  <h3>Purchaser details</h3>
+                  <div class="ticket-row">
+                    <span>Name</span>
+                    <span id="ticketAttendeeName">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Email</span>
+                    <span id="ticketAttendeeEmail">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Phone</span>
+                    <span id="ticketAttendeePhone">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Address</span>
+                    <span id="ticketAttendeeAddress">—</span>
+                  </div>
+                </div>
+
+                <div class="ticket-section">
+                  <h3>Payment details</h3>
+                  <div class="ticket-row">
+                    <span>Date</span>
+                    <span id="paymentDate">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Reference number</span>
+                    <span id="referenceNumber">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Tickets</span>
+                    <span id="ticketCountRow">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Amount</span>
+                    <span id="amountRow">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Payment method</span>
+                    <span id="paymentMethod">—</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span>Payment status</span>
+                    <span id="paymentStatus" class="status-success">—</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tickets: the actual entry passes. One per attendee, since a
+             single booking can cover several people at once. -->
+          <div class="tickets-section" id="ticketsSection">
+            <div class="tickets-section-header">
+              <h2>Your tickets</h2>
+              <button class="btn-primary" id="downloadAllBtn">
+                Download all
+              </button>
+            </div>
+            <div class="tickets-list" id="ticketsContainer"></div>
+          </div>
+        </div>
+
+        <!-- One of these is cloned per attendee by confirmation.js -->
+        <template id="ticketStubTemplate">
+          <article class="ticket-stub">
+            <div class="ticket-stub-main">
+              <p class="ticket-stub-presenter">Eventify presents</p>
+              <h3 class="ticket-stub-event" data-field="eventName">—</h3>
+
+              <div class="ticket-stub-meta">
+                <div>
+                  <span class="meta-label">Timing</span>
+                  <span class="meta-value" data-field="eventDate">—</span>
+                </div>
+                <div>
+                  <span class="meta-label">Venue</span>
+                  <span class="meta-value" data-field="eventVenue">—</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-stub-divider"></div>
+
+            <div class="ticket-stub-side">
+              <div class="ticket-stub-attendee-row">
+                <div>
+                  <span class="meta-label">Attendee</span>
+                  <span class="meta-value" data-field="attendeeName">—</span>
+                </div>
+                <span class="tier-badge" data-field="ticketTier">—</span>
+              </div>
+
+              <img
+                class="ticket-stub-qr"
+                data-field="qrCode"
+                alt="Ticket QR code"
+                width="110"
+                height="110"
+              />
+
+              <div class="ticket-stub-bottom-row">
+                <span class="ticket-stub-ref" data-field="ticketRef">—</span>
+                <button class="btn-download-single" data-action="download">
+                  Download
+                </button>
+              </div>
+            </div>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-img"></div>
+            <h4>Event <span>Ify</span></h4>
+          </div>
+          <p>
+            The modern platform for discovering and booking experiences that
+            matter.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="event.html">Events near you</a></li>
+            <li><a href="event.html">Trending</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <div class="socials-links">
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/instagram-icon.svg"
+                  alt="instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/facebook-icon.svg"
+                  alt="facebook"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/X (formerly Twitter)_light.svg"
+                  alt="X"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Eventify. All rights reserved.</span>
+        <span>Privacy · Terms · Cookies</span>
+      </div>
+
+      <h1 class="ghost">EVENT IFY</h1>
+    </footer>
+  </body>
+</html>

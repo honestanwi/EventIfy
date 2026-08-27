@@ -6,7 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/nav-footer.css" />
+    <link rel="stylesheet" href="css/event.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <!-- <link rel="stylesheet" href="css/cards.css" /> -->
     <script defer src="js/index.js"></script>
+    <script defer src="js/theme.js"></script>
   </head>
   <body>
     <!-- Nav -->
@@ -16,6 +20,15 @@
           <div class="logo-img"></div>
           <h4>Event <span>Ify</span></h4>
         </div>
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle light and dark mode"
+        >
+          🌙
+        </button>
 
         <button
           id="burger"
@@ -39,6 +52,76 @@
         </ul>
       </div>
     </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-head">
+            Where every event becomes a <span>Moment</span>
+          </h1>
+          <p>
+            Discover unforgettable experiences, connect with energy of the crowd
+          </p>
+          <a class="action-buttons" href="pages/event.html">Explore events</a>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="home-event-section">
+          <h2 class="home-event-title">Featured Events</h2>
+          <div id="featured-events" class="home-event-grid"></div>
+        </div>
+
+        <div class="home-event-section">
+          <h2 class="home-event-title">Top Picks</h2>
+          <div id="top-picks" class="home-event-grid"></div>
+        </div>
+      </section>
+
+      <article class="about-us-section">
+        <div class="about-us">
+          <h1>About Us</h1>
+
+          <h2>Discover. Connect. Experience.</h2>
+
+          <p>
+            <span> Eventify</span> makes it easier to discover and book the
+            events that matter to you. From exciting concerts and creative art
+            shows to tech events, conferences, and sports, we bring experiences
+            together in one place. Whether you're looking for something new to
+            experience or planning your next big event, Eventify helps you find
+            the right event, secure your ticket, and make memories that last.
+          </p>
+
+          <h2>Your next experience starts here.</h2>
+          <div class="cta">
+            <a class="action-buttons" href="pages/event.html">Explore events</a>
+          </div>
+          <h2>Why choose us?</h2>
+          <p>
+            We bring you a seamless and easy way to access all your favorite
+            events
+          </p>
+          <div class="stats">
+            <div class="stat-item">
+              <h3 class="counter" data-target="50">0 <span>+</span></h3>
+              <p>Happy clients</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="counter" data-target="10">0<span>+</span></h3>
+              <p>City Events</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="counter" data-target="100">0<span>+</span></h3>
+              <p>Events</p>
+            </div>
+          </div>
+          <h1>Contact Us</h1>
+          <p class="email">Any worries? Any questions? Send us an email at:</p>
+          <a class="action-buttons" href="#">Eventify@gmail.com</a>
+        </div>
+      </article>
+    </main>
 
     <footer>
       <div class="footer-inner">
