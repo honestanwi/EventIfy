@@ -1,0 +1,330 @@
+@font-face {
+  font-family: DM Sans;
+  src: url(../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #09090b;
+  --card: #141418;
+  --primary: #8b5cf6;
+  --primary-soft: rgba(139, 92, 246, 0.15);
+  --accent: #22d3ee;
+  --accent-soft: rgba(34, 211, 238, 0.12);
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.07);
+  --radius: 16px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  --header-font: SpaceGrotesk;
+  --body-font: DM Sans;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #202027;
+  border-radius: 8px;
+}
+
+/* Moving shine */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* =========================================================
+   EVENT CARD SKELETON
+========================================================= */
+
+.skeleton-event-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  min-width: 280px;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Image */
+.skeleton-event-image {
+  width: 100%;
+  height: 210px;
+  border-radius: 0;
+}
+
+/* Content */
+.skeleton-event-content {
+  padding: 16px;
+}
+
+/* Small category */
+.skeleton-category {
+  width: 70px;
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.skeleton-title {
+  width: 85%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.skeleton-title.short {
+  width: 60%;
+}
+
+/* Description/info */
+.skeleton-text {
+  width: 75%;
+  height: 13px;
+  margin-bottom: 8px;
+}
+
+.skeleton-text.short {
+  width: 50%;
+}
+
+/* =========================================================
+   DESKTOP EVENT CARD
+========================================================= */
+
+@media (min-width: 768px) {
+  .skeleton-event-card {
+    width: 100%;
+    min-width: 0;
+    height: 185px;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skeleton-event-image {
+    width: 42%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .skeleton-event-content {
+    flex: 1;
+    padding: 16px;
+  }
+}
+
+
+/* =========================================================
+   HOMEPAGE SKELETON
+========================================================= */
+
+.skeleton-home-card {
+  width: 280px;
+  min-width: 280px;
+}
+
+@media (min-width: 768px) {
+  .skeleton-home-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   EVENT DETAIL SKELETON
+========================================================= */
+
+.detail-skeleton {
+  width: 100%;
+}
+
+/* Main image */
+.skeleton-detail-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+}
+
+/* Right-side summary */
+.skeleton-detail-category {
+  width: 80px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+
+.skeleton-detail-title {
+  width: 90%;
+  height: 42px;
+  margin-bottom: 25px;
+}
+
+.skeleton-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skeleton-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.skeleton-info-text {
+  flex: 1;
+}
+
+.skeleton-info-label {
+  width: 45px;
+  height: 11px;
+  margin-bottom: 7px;
+}
+
+.skeleton-info-value {
+  width: 150px;
+  height: 15px;
+}
+
+
+/* Description */
+.skeleton-heading {
+  width: 180px;
+  height: 25px;
+  margin-bottom: 18px;
+}
+
+.skeleton-paragraph {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeleton-paragraph.medium {
+  width: 85%;
+}
+
+.skeleton-paragraph.short {
+  width: 65%;
+}
+
+
+/* Highlights */
+.skeleton-highlight {
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+}
+
+
+/* Organizer */
+.skeleton-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.skeleton-organizer-name {
+  width: 130px;
+  height: 16px;
+  margin-bottom: 7px;
+}
+
+.skeleton-organizer-role {
+  width: 90px;
+  height: 12px;
+}
+
+
+/* Ticket */
+.skeleton-ticket {
+  height: 280px;
+  border-radius: 14px;
+  padding: 30px 25px;
+}
+
+.skeleton-ticket-title {
+  width: 120px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+
+.skeleton-ticket-price {
+  width: 100px;
+  height: 35px;
+  margin-bottom: 25px;
+}
+
+.skeleton-ticket-line {
+  width: 80%;
+  height: 13px;
+  margin-bottom: 12px;
+}
+
+.skeleton-ticket-button {
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  border-radius: 9px;
+}
+
+
+@media (min-width: 768px) {
+  .skeleton-detail-image {
+    height: 450px;
+  }
+
+  .skeleton-detail-title {
+    height: 55px;
+  }
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+[data-theme="light"] .skeleton {
+  background: #e7e7ec;
+}
+
+[data-theme="light"] .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+}

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register — Eventify</title>
+    <link rel="stylesheet" href="../css/registration.css" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+    <script defer src="../js/index.js"></script>
+    <script defer src="../js/registration.js"></script>
+    <script defer src="../js/theme.js"></script>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <div class="nav-inner">
+        <div class="logo">
+          <div class="logo-img"></div>
+          <h4>Event <span>Ify</span></h4>
+        </div>
+
+        <button
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+
+        <ul id="menu">
+          <li class="list" class="active"><a href="../index.html">Home</a></li>
+          <li class="list"><a href="event.html">Events</a></li>
+          <li class="list"><a href="booking.html">Booking</a></li>
+          <li class="list">
+            <a class="ghost-btn" href="registration.html">Registration</a>
+          </li>
+          <li class="list">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle light and dark mode"
+            >
+              🌙
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section class="register-section">
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-pink"></div>
+        <div class="glow glow-blue"></div>
+
+        <div class="register-card">
+          <div class="register-header">
+            <span class="glow-line"></span>
+
+            <h1>Enter Details Here</h1>
+
+            <p>Your online ticket will be mailed to your email address</p>
+          </div>
+
+          <form class="register-form" id="registerForm">
+            <div class="input-group">
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email Address"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Your Phone Number"
+                required
+              />
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Your Address"
+                required
+              />
+            </div>
+
+            <!-- Filled in by registration.js when a booking covers more
+                 than one attendee (?tickets=3 in the URL, for example) -->
+            <div class="input-group extra-attendees" id="extraAttendees"></div>
+
+            <p class="form-error" id="formError" hidden>
+              Please fill in every field before continuing.
+            </p>
+
+            <button type="submit">Confirm Details</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-img"></div>
+            <h4>Event <span>Ify</span></h4>
+          </div>
+          <p>
+            The modern platform for discovering and booking experiences that
+            matter.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="event.html">Events near you</a></li>
+            <li><a href="event.html">Trending</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <div class="socials-links">
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/instagram-icon.svg"
+                  alt="instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/facebook-icon.svg"
+                  alt="facebook"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/images/svg/X (formerly Twitter)_light.svg"
+                  alt="X"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Eventify. All rights reserved.</span>
+        <span>Privacy · Terms · Cookies</span>
+      </div>
+
+      <h1 class="ghost">EVENT IFY</h1>
+    </footer>
+  </body>
+</html>

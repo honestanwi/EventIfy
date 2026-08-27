@@ -1,0 +1,92 @@
+/* =================================
+   EVENTIFY THEME
+================================= */
+
+/* DARK MODE — DEFAULT */
+:root {
+  --bg: #09090b;
+  --card: #141418;
+
+  --primary: #8b5cf6;
+  --primary-soft: rgba(139, 92, 246, 0.15);
+
+  --accent: #22d3ee;
+  --accent-soft: rgba(34, 211, 238, 0.12);
+
+  --text: #fafafa;
+  --muted: #a1a1aa;
+
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.07);
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  --event-page-bg: #09090b;
+  --event-surface: #141418;
+  --event-ink: #fafafa;
+  --event-muted: #a1a1aa;
+  --event-accent: #22d3ee;
+}
+
+
+/* =================================
+   LIGHT MODE
+================================= */
+
+[data-theme="light"] {
+  --bg: #f7f7f9;
+  --card: #ffffff;
+
+  --primary: #7c3aed;
+  --primary-soft: rgba(124, 58, 237, 0.12);
+
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.10);
+
+  --text: #18181b;
+  --muted: #71717a;
+
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.85);
+
+  --border: rgba(0, 0, 0, 0.08);
+
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+
+  --event-page-bg: #f7f7f9;
+  --event-surface: #ffffff;
+  --event-ink: #18181b;
+  --event-muted: #71717a;
+  --event-accent: #0891b2;
+}
+
+
+/* =================================
+   GLOBAL TRANSITION
+================================= */
+
+html {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+body,
+nav,
+section,
+article,
+.card,
+.event-card,
+button,
+input,
+select {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}

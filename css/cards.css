@@ -1,0 +1,459 @@
+.cards {
+  width: min(100%, 1200px);
+  /* margin: 0 auto; */
+}
+
+#art-cards , #concert-cards , #sport-cards , #tech-cards , #conference-cards {
+  margin-top: 2.5rem;
+}
+
+.event-section-title {
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: var(--header-font);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* .event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.event-grid::-webkit-scrollbar {
+    display: none;
+} */
+/* ===== Mobile: each row scrolls independently ===== */
+.event-grid{
+  width: 100%;
+}
+.event-row {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-row .event-card {
+  flex: 0 0 280px;          /* fixed width for nice scrolling */
+  scroll-snap-align: start;
+  min-width: 280px;
+}
+
+/* Optional nicer scrollbar */
+.event-row::-webkit-scrollbar {
+  display: none;
+}
+.event-row::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+/* Mobile ticket: the media is shown first with a perforated seam. */
+.event-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--event-ink);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s ease;
+  scroll-snap-align: start;
+}
+
+.event-card::before,
+.event-card::after {
+  content: "";
+  position: absolute;
+  top: 105px;
+  z-index: 3;
+  width: 40px;
+  height: 50px;
+  border-radius: 60%;
+  background: var(--event-page-bg);
+  transform: translateY(-50%);
+}
+
+.event-card::before {
+  left: -15px;
+}
+
+.event-card::after {
+  right: -15px;
+}
+
+.event-card-media {
+  position: relative;
+  order: -1;
+  width: 100%;
+  height: 210px;
+}
+
+.event-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease, scale 0.3s ease;
+}
+.event-image:hover{
+  transform: translateY(-3px);
+  /* /* transform: scale(1.02); *  / */
+}
+
+/* Dots sit on the boundary between the image and the card content. */
+.event-card-media::before {
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: -5px;
+  left: 1px;
+  z-index: 2;
+  height: 13px;
+  background-image: radial-gradient(circle, #fff 4px, transparent 4.5px);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 20px 3px;
+}
+
+.event-card-media::after {
+  display: none;
+}
+
+.event-card-content {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-areas:
+    "date category"
+    "date title"
+    "date location"
+    "date actions";
+  column-gap: 1rem;
+  padding: 1.5rem 1.25rem 1.25rem;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.event-date {
+  grid-area: date;
+  align-self: start;
+  width: 64px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--bg);
+  color: #fff;
+  text-align: center;
+}
+
+.event-month,
+.event-day,
+.event-yr,
+.event-time {
+  display: block;
+}
+
+.event-month {
+  padding-top: 6px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.event-day {
+  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.event-yr {
+  font-size: 0.5625rem;
+  opacity: 0.7;
+}
+
+.event-time {
+  margin-top: 6px;
+  padding: 4px 0;
+  background: var(--accent);
+  font-size: 0.625rem;
+}
+
+.event-category {
+  grid-area: category;
+  margin: 0 0 0.25rem;
+  color: var(--event-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.event-title {
+  grid-area: title;
+  margin: 0;
+  color: var(--event-ink);
+  font-family: var(--header-font);
+  font-size: 1.1875rem;
+  line-height: 1.25;
+}
+
+.event-location {
+  grid-area: location;
+  margin: 0.35rem 0 0;
+  color: var(--event-muted);
+  font-size: 0.8125rem;
+}
+
+.event-actions {
+  grid-area: actions;
+  margin-top: 1rem;
+}
+
+.event-details-button {
+  display: inline-flex;
+  padding: 0.6rem 1rem;
+  border-radius: 3px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.event-details-button:hover,
+.event-details-button:focus-visible {
+  background: linear-gradient(135deg, var(--primary), var(--accent));;
+  transform: translateY(-1px);
+}
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-results h2 {
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: var(--muted);
+}
+@media(min-width:768px){
+.cards {
+    width: min(100%, 1500px);
+    margin: 0 auto;
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .event-row {
+    display: contents;
+  }
+
+  .event-row .event-card {
+    min-width: 0;
+    flex: none;
+  }
+
+
+  /* =========================
+     EVENT CARD
+  ========================= */
+
+  .event-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    height: 185px;
+    min-height: 185px;
+
+    border-radius: 6px;
+    background: var(--event-surface);
+
+    box-shadow: none;
+
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    border: 1px solid transparent;
+  }
+
+  .event-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  }
+  .event-card::before {
+  display: none;
+}
+.event-card::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--event-page-bg);
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.event-card-media::after {
+  display: none;
+}
+
+
+  /* =========================
+     CARD CONTENT
+  ========================= */
+
+  .event-card-content {
+    flex: 1;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    padding: 16px 10px 16px 12px;
+  }
+
+
+  /* =========================
+     DATE
+  ========================= */
+
+  .event-date {
+    width: 50px;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .event-month {
+    font-size: 0.65rem;
+  }
+
+  .event-day {
+    font-size: 1.3rem;
+  }
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .event-card-media {
+    order: initial;
+
+    flex: 0 0 38%;
+    width: 38%;
+
+    height: auto;
+    min-width: 0;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+
+  /* =========================
+     PERFORATIONS
+  ========================= */
+
+  .event-card-media::before {
+    top: 5px;
+    bottom: 6px;
+    left: -6px;
+
+    width: 12px;
+    height: auto;
+
+    background-image:
+      radial-gradient(
+        circle,
+        var(--event-surface) 4.5px,
+        transparent 5px
+      );
+
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 12px 16px;
+  }
+
+
+  /* =========================
+     SEMICIRCLE
+  ========================= */
+
+  .event-card-media::after {
+    display: block;
+
+    position: absolute;
+
+    top: 50%;
+    right: -14px;
+
+    width: 32px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--event-page-bg);
+
+    content: "";
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+  }
+
+
+  .event-title {
+    font-size: 1rem;
+    min-width: 0;
+  }
+
+  .event-location {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .event-actions {
+    align-self: end;
+    margin-top: auto;
+  }
+}
+@media (min-width:1010px){
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}

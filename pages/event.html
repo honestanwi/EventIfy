@@ -6,8 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/event.css" />
     <link rel="stylesheet" href="../css/nav-footer.css" />
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/skeleton.css" />
+    <!-- <script defer src="../js/index.js"></script> -->
     <script defer src="../js/event.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/skeleton.js"></script>
   </head>
   <body>
     <nav id="nav-bar">
@@ -35,6 +38,16 @@
           <li class="list"><a href="booking.html">Booking</a></li>
           <li class="list">
             <a class="ghost-btn" href="registration.html">Registration</a>
+          </li>
+          <li class="list">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle light and dark mode"
+            >
+              🌙
+            </button>
           </li>
         </ul>
       </div>
@@ -66,18 +79,35 @@
 
           <div class="search-divider"></div>
 
-          <select id="city-filter" class="search-select">
-            <option value="all">Any city</option>
+          <select class="search-select" id="city-filter">
+            <option value="Any city">Any city</option>
+            <option value="Yaoundé">Yaoundé</option>
+            <option value="Douala">Douala</option>
+            <option value="Buea">Buea</option>
+            <option value="Bamenda">Bamenda</option>
+            <option value="Limbe">Limbe</option>
+            <option value="Kribi">Kribi</option>
           </select>
 
           <div class="search-divider"></div>
 
-          <select id="date-filter" class="search-select">
-            <option value="all">Any Date</option>
+          <select class="search-select" id="date-filter">
+            <option value="Any Date">Any Date</option>
           </select>
 
           <button id="search-btn" class="btn btn-primary">Search</button>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="categories">
+        <button class="cat-pill active" data-category="all">All</button>
+        <button class="cat-pill" data-category="Concert">Music</button>
+        <button class="cat-pill" data-category="Tech">Tech</button>
+        <button class="cat-pill" data-category="Arts">Arts</button>
+        <button class="cat-pill" data-category="Sports">Sports</button>
+        <button class="cat-pill" data-category="Conference">Conference</button>
       </div>
     </section>
 
@@ -90,6 +120,7 @@
         <div id="conference-cards"></div>
         <!-- <div class="art-cards"></div> -->
       </div>
+      <div id="no-results"></div>
     </section>
 
     <footer>

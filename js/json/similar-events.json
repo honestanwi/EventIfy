@@ -1,0 +1,320 @@
+[
+  {
+    "id": 101,
+    "title": "Cameroon Art Festival",
+    "category": "Arts",
+    "date": "2026-09-05",
+    "time": "10:00 AM",
+    "location": "Yaoundé",
+    "venue": "National Museum",
+    "address": "National Museum, Yaoundé, Cameroon",
+    "price": 3000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/cameroon art festival.jpg",
+    "description": "A celebration of Cameroonian creativity featuring visual artists, painters, sculptors, designers and cultural performers from across the country.",
+    "organizer": "Cameroon Arts & Culture Association",
+    "capacity": 500,
+    "highlights": [
+      "Live art exhibitions",
+      "Local artists showcase",
+      "Cultural performances",
+      "Art workshops",
+      "Meet and connect with artists"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 2000,
+        "benefits": [
+          "Full event access",
+          "Access to art exhibitions",
+          "Art workshop access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 3000,
+        "benefits": [
+          "Full event access",
+          "Access to all exhibitions",
+          "Art workshop access",
+          "Networking opportunities"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP seating",
+          "Exclusive artist meet & greet",
+          "VIP gift pack"
+        ]
+      }
+    ]
+},
+ {
+    "id": 106,
+    "title": "Heritage Through Art",
+    "category": "Arts",
+    "date": "2026-10-10",
+    "time": "10:00 AM",
+    "location": "Bamenda",
+    "venue": "Bamenda Cultural Centre",
+    "address": "Bamenda Cultural Centre, Bamenda, Cameroon",
+    "price": 2000,
+    "currency": "XAF",
+    "image": "../assets/images/events/art/heritage through art.jpg",
+    "description": "An artistic journey through Cameroon's cultural heritage featuring traditional art, crafts, storytelling and performances.",
+    "organizer": "Bamenda Cultural Centre",
+    "capacity": 400,
+    "highlights": [
+      "Traditional art exhibition",
+      "Cultural performances",
+      "Traditional crafts",
+      "Storytelling sessions",
+      "Heritage workshops"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Full event access",
+          "Cultural exhibition access"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2000,
+        "benefits": [
+          "Full event access",
+          "Cultural performances",
+          "Heritage workshops"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 5000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP seating",
+          "Private cultural session",
+          "Traditional gift package"
+        ]
+      }
+    ]
+  },
+   {
+    "id": 115,
+    "title": "Tems Concert",
+    "category": "Concert",
+    "date": "2026-10-18",
+    "time": "7:30 PM",
+    "location": "Limbe",
+    "venue": "Botanic Garden",
+    "address": "Limbe Botanic Garden, Limbe, Cameroon",
+    "price": 7500,
+    "currency": "XAF",
+    "image": "../assets/images/events/concerts/tems.jpg",
+    "description": "An outdoor music experience combining Afrobeats, R&B and soulful sounds in the beautiful atmosphere of Limbe.",
+    "organizer": "Coastal Entertainment",
+    "capacity": 4000,
+    "highlights": [
+      "Outdoor concert",
+      "Live performances",
+      "DJ sets",
+      "Food vendors",
+      "Coastal music experience"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 5500,
+        "benefits": [
+          "General concert access",
+          "Live performances"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 7500,
+        "benefits": [
+          "Premium viewing area",
+          "Full concert access",
+          "Event merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 15000,
+        "benefits": [
+          "VIP viewing area",
+          "VIP lounge",
+          "Artist meet & greet",
+          "Exclusive gift"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "title": "Beach Volleyball Open",
+    "category": "Sports",
+    "date": "2026-10-05",
+    "time": "9:00 AM",
+    "location": "Kribi",
+    "venue": "Kribi Beach",
+    "address": "Kribi Beach, Kribi, Cameroon",
+    "price": 2500,
+    "currency": "XAF",
+    "image": "../assets/images/events/sport/Volleyball.jpg",
+    "description": "An exciting beach volleyball tournament featuring competitive matches in a relaxed coastal setting.",
+    "organizer": "Cameroon Beach Sports",
+    "capacity": 800,
+    "highlights": [
+      "Beach volleyball",
+      "Tournament matches",
+      "Live DJ",
+      "Beach activities",
+      "Food and drinks"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 1500,
+        "benefits": [
+          "Beach event access",
+          "Match viewing"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 2500,
+        "benefits": [
+          "Premium viewing",
+          "Beach activities",
+          "Event merchandise"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 6000,
+        "benefits": [
+          "VIP beach seating",
+          "VIP refreshments",
+          "Priority access",
+          "Exclusive merchandise"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "title": "Web Development Bootcamp",
+    "category": "Tech",
+    "date": "2026-09-29",
+    "time": "8:00 AM",
+    "location": "Buea",
+    "venue": "Silicon Mountain",
+    "address": "Silicon Mountain, Buea, Cameroon",
+    "price": 10000,
+    "currency": "XAF",
+    "image": "../assets/images/events/tech/Bootcamp flyer Design.jpg",
+    "description": "An intensive web development bootcamp designed to help participants build practical frontend and backend development skills.",
+    "organizer": "Silicon Mountain Community",
+    "capacity": 300,
+    "highlights": [
+      "HTML and CSS",
+      "JavaScript development",
+      "Frontend projects",
+      "Backend introduction",
+      "Developer networking"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 7500,
+        "benefits": [
+          "Bootcamp access",
+          "Learning materials",
+          "Workshop sessions"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 10000,
+        "benefits": [
+          "Full bootcamp access",
+          "Learning materials",
+          "Practical projects",
+          "Certificate of participation"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 18000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "Mentor sessions",
+          "Priority support",
+          "Developer resource pack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "title": "Youth Leadership Summit",
+    "category": "Conference",
+    "date": "2026-09-16",
+    "time": "10:00 AM",
+    "location": "Yaoundé",
+    "venue": "Hilton Yaoundé",
+    "address": "Hilton Yaoundé, Yaoundé, Cameroon",
+    "price": 5000,
+    "currency": "XAF",
+    "image": "../assets/images/events/conference/AfroTech Inspires African-American Millennials.jpg",
+    "description": "A leadership summit designed to inspire young people through leadership talks, mentorship, networking and personal development.",
+    "organizer": "Young Leaders Cameroon",
+    "capacity": 800,
+    "highlights": [
+      "Leadership talks",
+      "Mentorship",
+      "Youth networking",
+      "Career development",
+      "Panel discussions"
+    ],
+    "ticketTypes": [
+      {
+        "name": "Early Bird Pass",
+        "price": 3500,
+        "benefits": [
+          "Summit access",
+          "Leadership sessions",
+          "Networking"
+        ]
+      },
+      {
+        "name": "Standard Pass",
+        "price": 5000,
+        "benefits": [
+          "Full summit access",
+          "Mentorship sessions",
+          "Career workshops",
+          "Event materials"
+        ]
+      },
+      {
+        "name": "VIP Experience",
+        "price": 10000,
+        "benefits": [
+          "All Standard Pass benefits",
+          "VIP mentorship session",
+          "Speaker meet & greet",
+          "VIP gift pack"
+        ]
+      }
+    ]
+  }
+]
