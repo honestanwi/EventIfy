@@ -67,7 +67,7 @@ function createEventCard(event) {
       <div class="event-card-media">
         <img
           class="event-image"
-          src="${event.image}"
+          src="${event.image.replace("../", "")}"
           alt="${event.title}"
           loading="lazy"
         />
