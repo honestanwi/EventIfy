@@ -12,6 +12,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
     ></script>
     <script defer src="../js/confirmation.js"></script>
+    <script defer src="../js/theme.js"></script>
   </head>
   <body>
     <nav id="nav-bar">
@@ -39,6 +40,16 @@
           <li class="list"><a href="booking.html">Booking</a></li>
           <li class="list">
             <a class="ghost-btn" href="registration.html">Registration</a>
+          </li>
+          <li class="list">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle light and dark mode"
+            >
+              🌙
+            </button>
           </li>
         </ul>
       </div>
@@ -261,8 +272,7 @@
         <span>© 2026 Eventify. All rights reserved.</span>
         <span>Privacy · Terms · Cookies</span>
       </div>
-
-      <h1 class="ghost">EVENT IFY</h1>
+      <div class="brand-wrapper"><h1 class="ghost">EVENT IFY</h1></div>
     </footer>
   </body>
 </html>

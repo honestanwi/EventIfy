@@ -205,12 +205,15 @@ nav {
     margin-top: 3rem;
     text-align: center;
     width: 100%;
-    font-size: 3.9rem;
+    font-size: clamp(5rem, 18vw, 15rem);
+    font-weight: 700;
     background-image: linear-gradient(90deg, rgb(139, 92, 246, 0.6), rgb(34, 211, 238, 0.6));
   background-clip: text;
   -webkit-background-clip: text; 
   color: transparent;
   -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  margin-bottom: -100px;
 }
 
 footer {
@@ -398,7 +401,8 @@ footer {
     margin-top: 3rem;
     text-align: center;
     width: 100%;
-    font-size: 20rem;
+    font-size: clamp(4.5rem, 18vw, 15rem);
     background-image: linear-gradient(90deg, rgb(139, 92, 246, 0.6), rgb(34, 211, 238, 0.6));
+    overflow: hidden;
 }
 }

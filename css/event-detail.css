@@ -325,6 +325,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .ticket-type-card {
@@ -487,4 +488,115 @@ a {
     grid-template-columns: 1fr;
   }
 
+}
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --primary: #7c3aed;
+  --primary-soft: rgba(124, 58, 237, 0.10);
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.10);
+  --text: #18181b;
+  --muted: #71717a;
+  --glass-border: rgba(24,24,27,.09);
+  --shadow: 0 12px 35px rgba(24,24,27,.10);
+}
+
+[data-theme="light"] body {
+  background: #f7f7fb;
+  color: #18181b;
+}
+
+[data-theme="light"] .back-link {
+  color: #71717a;
+}
+
+[data-theme="light"] .back-link:hover {
+  color: #18181b;
+}
+
+[data-theme="light"] .event-category {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .info-item > span {
+  background: #ffffff;
+  border: 1px solid rgba(24,24,27,.07);
+  box-shadow: 0 5px 16px rgba(24,24,27,.06);
+}
+
+[data-theme="light"] .info-item small {
+  color: #71717a;
+}
+
+[data-theme="light"] .about-event p {
+  color: #52525b;
+}
+
+[data-theme="light"] #event-highlights li {
+  background: #ffffff;
+  border: 1px solid rgba(24,24,27,.06);
+  color: #52525b;
+  box-shadow: 0 7px 22px rgba(24,24,27,.05);
+}
+
+[data-theme="light"] #event-highlights li::before {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .organizer-avatar {
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+}
+
+[data-theme="light"] .organizer-info p {
+  color: #71717a;
+}
+
+[data-theme="light"] .ticket-type-card {
+  background: #fff;
+  color: #18181b;
+  border: 1px solid rgba(124,58,237,.10);
+  box-shadow: 0 12px 30px rgba(24,24,27,.07);
+}
+
+[data-theme="light"] .ticket-type-card::before
+ {
+  background-image: radial-gradient(circle at 50% 0, #f7f7fb 19px, transparent 18px);
+}
+[data-theme="light"] .ticket-type-card::after{
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: -1px;
+  left: 1px;
+  z-index: 2;
+  height: 13px;
+  background-image: radial-gradient(circle at 50% 0, #f7f7f7 19px, transparent 18px);
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: 48px 30px;
+
+}
+
+[data-theme="light"] .ticket-type-card:hover {
+  background: linear-gradient(145deg, #ffffff, #e4dcfc);
+}
+
+[data-theme="light"] .ticket-type-price small,
+[data-theme="light"] .ticket-type-benefits li {
+  color: #71717a;
+}
+
+[data-theme="light"] .ticket-type-benefits li::before {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .ticket-select-btn {
+  background: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(124,58,237,.18);
+}
+
+[data-theme="light"] .ticket-select-btn:hover {
+  background: #6d28d9;
 }

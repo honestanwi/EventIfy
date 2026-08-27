@@ -36,8 +36,9 @@ body {
 }
 
 .hero {
+  margin-top: -90px;
   position: relative;
-  min-height: 72vh;
+  min-height: 82vh;
   width: 100%;
   background: url('../assets/images/hero/stux-live-concert-388160_1920\ \(1\).jpg') no-repeat center / cover;
   justify-content: center;
@@ -58,11 +59,13 @@ body {
   text-align: center;
   color: var(--color-warm-ivory);
   max-width: 1100px;
+  /* max-height: 400px; */
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(6px) saturate(120%);
   margin: 0 auto;
   margin-bottom: 20px;
+  margin-top: 70px;
 }
 
 .hero-content h1{font-weight:700}
@@ -80,6 +83,8 @@ body {
 }
 .hero-content h1{
     font-size: clamp(2rem, 5vw, 4.8rem);
+  margin-top: 80px;
+
 }
 .logo-text{
     font-size: clamp(2rem, 5vw, 4.8rem);
@@ -303,6 +308,7 @@ position: relative;
 [data-theme="light"] body {
     background: #f5f5f7;
     color: #18181b;
+    margin: 0 -20px;
 }
 
 
@@ -318,6 +324,7 @@ position: relative;
 
 [data-theme="light"] .navbar a {
     color: #52525b;
+    border: 1px solid #fdf4f4;
 }
 
 [data-theme="light"] .navbar a:hover {
@@ -334,23 +341,21 @@ position: relative;
 ========================= */
 
 [data-theme="light"] .hero-overlay {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.18),
-            rgba(255, 255, 255, 0.42)
-        );
+   background-color: rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="light"] .hero-content {
-    color: #18181b;
-    background: rgba(255, 255, 255, 0.20);
+    color: var(--text);
+    /* background: rgba(255, 255, 255, 0.20);
     border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); */
 }
 
+[data-theme="light"] .hero-content h4{
+    color: var(--text);
+}
 [data-theme="light"] .hero-content p {
-    color: #3f3f46;
+    color: var(--text);
 }
 
 
@@ -474,28 +479,26 @@ position: relative;
 ========================= */
 
 [data-theme="light"] .event-details-button {
-    color: #7c3aed;
+    color: var(--text);
     border-color: #7c3aed;
 }
 
 [data-theme="light"] .event-details-button:hover {
-    background: #7c3aed;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     color: white;
 }
 
 
-/* =========================
-   ABOUT SECTION
-========================= */
 
 [data-theme="light"] .about-us-section {
-    background: #ffffff;
+      background-color: #d1eaf7;
+
 }
 
 [data-theme="light"] .about-us-section::before {
     background-image:
         linear-gradient(
-            rgba(124, 58, 237, 0.06) 1px,
+            rgba(120, 51, 241, 0.06) 1px,
             transparent 1px
         ),
         linear-gradient(
@@ -514,10 +517,6 @@ position: relative;
     color: #52525b;
 }
 
-
-/* =========================
-   STATS
-========================= */
 
 [data-theme="light"] .stat-item h3 {
     color: #18181b;
@@ -563,5 +562,167 @@ position: relative;
     color: #ffffff;
 }
 
+/* =========================================================
+   EVENTIFY LIGHT MODE — HOMEPAGE
+   Activate with: <html data-theme="light">
+========================================================= */
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --primary: #7c3aed;
+  --primary-soft: rgba(124, 58, 237, 0.10);
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.10);
+  --text: #18181b;
+  --muted: #71717a;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(24, 24, 27, 0.09);
+  --glass-strong: rgba(255, 255, 255, 0.92);
+  --shadow: 0 12px 35px rgba(24, 24, 27, 0.10);
+}
+
+/* [data-theme="light"] body {
+  background: #f7f7fb;
+  color: #18181b;
+}
+
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.48));
+}
+
+[data-theme="light"] .hero-content {
+  color: #18181b;
+  background: rgba(255,255,255,.20);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: 0 20px 60px rgba(24,24,27,.12);
+}
+
+[data-theme="light"] .hero-content p {
+  color: #3f3f46;
+}
+
+[data-theme="light"] .hero-head span {
+  background: linear-gradient(90deg, #7c3aed, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .action-buttons {
+  background: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(124,58,237,.22);
+}
+
+[data-theme="light"] .action-buttons:hover {
+  background: #6d28d9;
+}
+
+[data-theme="light"] .cards {
+  background: #f7f7fb;
+}
+
+[data-theme="light"] .home-event-title,
+[data-theme="light"] .event-section-title {
+  color: #18181b;
+}
+
+[data-theme="light"] .event-card {
+  background: #ffffff;
+  color: #18181b;
+  border: 1px solid rgba(24,24,27,.06);
+  box-shadow: 0 15px 35px rgba(24,24,27,.08);
+}
+
+[data-theme="light"] .event-card:hover {
+  box-shadow: 0 18px 40px rgba(24,24,27,.13);
+}
+
+[data-theme="light"] .event-card::before,
+[data-theme="light"] .event-card::after {
+  background: #f7f7fb;
+}
+
+[data-theme="light"] .event-card-media::before {
+  background-image: radial-gradient(circle, #ffffff 4px, transparent 4.5px);
+}
+
+[data-theme="light"] .event-date {
+  background: #18181b;
+  color: #ffffff;
+}
+
+[data-theme="light"] .event-time {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+[data-theme="light"] .event-title {
+  color: #18181b;
+}
+
+[data-theme="light"] .event-location {
+  color: #71717a;
+}
+
+[data-theme="light"] .event-category {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .event-details-button {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+[data-theme="light"] .event-details-button:hover {
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+}
+
+[data-theme="light"] .about-us-section {
+  background: #ffffff;
+}
+
+[data-theme="light"] .about-us-section::before {
+  background-image:
+    linear-gradient(rgba(124,58,237,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,.055) 1px, transparent 1px);
+}
+
+[data-theme="light"] .about-us h1,
+[data-theme="light"] .about-us h2 {
+  color: #18181b;
+}
+
+[data-theme="light"] .about-us p {
+  color: #52525b;
+}
+
+[data-theme="light"] .stat-item {
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(24,24,27,.07);
+  box-shadow: 0 8px 24px rgba(24,24,27,.06);
+}
+
+[data-theme="light"] .stat-item h3 {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .stat-item p {
+  color: #71717a;
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select {
+  background: #ffffff;
+  color: #18181b;
+  border-color: rgba(24,24,27,.12);
+}
+
+[data-theme="light"] input::placeholder {
+  color: #a1a1aa;
+}
 
 
+
+ */

@@ -337,3 +337,117 @@ font-family: var(--header-font);
         right: -100px;
     }
 }
+/* =========================================================
+   EVENTIFY LIGHT MODE — REGISTRATION
+   Activate with: <html data-theme="light">
+========================================================= */
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --primary: #7c3aed;
+  --primary-soft: rgba(124, 58, 237, 0.10);
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.10);
+  --text: #18181b;
+  --muted: #71717a;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(24, 24, 27, 0.09);
+  --glass-strong: rgba(255, 255, 255, 0.92);
+  --shadow: 0 12px 35px rgba(24, 24, 27, 0.10);
+}
+
+[data-theme="light"] body {
+  background: #f7f7fb;
+  color: var(--text);
+    margin: 0 -20px;
+
+}
+[data-theme="light"] #nav-bar {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .navbar a {
+    color: #52525b;
+    border: 1px solid #fdf4f4;
+}
+
+[data-theme="light"] .navbar a:hover {
+    color: #18181b;
+}
+
+[data-theme="light"] .logo h4 {
+    color: #18181b;
+}
+
+[data-theme="light"] .register-section {
+  background:
+    radial-gradient(circle at 15% 45%, rgba(124, 58, 237, 0.16), transparent 34%),
+    radial-gradient(circle at 85% 80%, rgba(8, 145, 178, 0.12), transparent 28%),
+    #f7f7fb;
+}
+
+[data-theme="light"] .glow {
+  opacity: 0.24;
+}
+
+[data-theme="light"] .register-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(24, 24, 27, 0.10);
+  box-shadow:
+    0 25px 80px rgba(24, 24, 27, 0.10),
+    inset 0 0 40px rgba(124, 58, 237, 0.025);
+}
+
+[data-theme="light"] .register-header h1 {
+  color: #18181b;
+}
+
+[data-theme="light"] .register-header p {
+  color: #71717a;
+}
+
+[data-theme="light"] .input-group input {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(24, 24, 27, 0.12);
+  color: #18181b;
+  box-shadow: 0 3px 12px rgba(24, 24, 27, 0.03);
+}
+
+[data-theme="light"] .input-group input::placeholder {
+  color: #a1a1aa;
+}
+
+[data-theme="light"] .input-group input:focus {
+  border-color: #7c3aed;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.10),
+    0 8px 22px rgba(124, 58, 237, 0.10);
+}
+
+[data-theme="light"] .register-form button {
+  color: #ffffff;
+  background: #7c3aed;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.22);
+}
+
+[data-theme="light"] .register-form button:hover {
+  background: #6d28d9;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.28);
+}
+[data-theme="light"] footer {
+    background: #111114;
+    /* color: #ffffff; */
+}
+
+[data-theme="light"] footer p,
+[data-theme="light"] footer li a {
+    color: #a1a1aa;
+}
+
+[data-theme="light"] footer li a:hover {
+    color: #ffffff;
+}

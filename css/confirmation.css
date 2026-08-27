@@ -8,7 +8,7 @@
   src: url(../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
-* {
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -31,14 +31,16 @@
   --header-font: SpaceGrotesk;
   --body-font: DM Sans;
 }
+html{
+  height: 100%;
+}
 body{
     background-color: var(--bg);
+    min-height: 100vh;
+    margin: 0;
+    /* width: 100vw; */
 }
 
-/* confirmation.css
-   Kept self-contained so it drops in cleanly — if your project already
-   defines root color variables (e.g. in a global styles.css), feel free to
-   swap the hex values below for your existing tokens. */
 
 .confirm-section {
   position: relative;
@@ -48,7 +50,8 @@ body{
   justify-content: center;
   min-height: 100vh;
   padding: 6rem 1.5rem 4rem;
-  background: #0b0b12;
+  background: var(--bg);
+  width: 100%;
 }
 
 .confirm-section .glow {
@@ -58,9 +61,9 @@ body{
   opacity: 0.35;
   z-index: 0;
 }
-.glow-purple { width: 380px; height: 380px; background: #7c3aed; top: -80px; left: -80px; }
+.glow-purple { width: 380px; height: 380px; background: var(--primary); top: -80px; left: -80px; }
 .glow-pink   { width: 320px; height: 320px; background: #ec4899; bottom: -60px; left: 30%; }
-.glow-blue   { width: 340px; height: 340px; background: #3b82f6; top: 10%; right: -100px; }
+.glow-blue   { width: 340px; height: 340px; background: var(--accent); top: 10%; right: -100px; }
 
 #confirmationContent {
   position: relative;
@@ -281,21 +284,24 @@ body{
 .ticket-stub-divider {
   position: relative;
   width: 0;
-  border-left: 2px dashed rgba(0, 0, 0, 0.15);
+  border-left: 4px dashed rgba(0, 0, 0, 0.15);
   margin: 1.25rem 0;
 }
 .ticket-stub-divider::before,
 .ticket-stub-divider::after {
   content: "";
   position: absolute;
-  left: -10px;
+  left: -13.5px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: #0b0b12;
+  transform: translateY(-50%);
+
 }
 .ticket-stub-divider::before { top: -1.25rem; }
-.ticket-stub-divider::after { bottom: -1.25rem; }
+.ticket-stub-divider::after { bottom: -2.45rem; }
+
 
 .ticket-stub-side {
   flex: 1;
@@ -395,3 +401,118 @@ body{
 .empty-state p { color: #a1a1aa; margin-bottom: 1.5rem; }
 
 .form-error { color: #f87171; font-size: 0.85rem; margin: -0.5rem 0 1rem; }
+
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --primary: #7c3aed;
+  --primary-soft: rgba(124,58,237,.10);
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --text: #18181b;
+  --muted: #71717a;
+}
+
+[data-theme="light"] body {
+  background: #f7f7fb;
+  color: #18181b;
+    margin: 0 -20px;
+
+}
+
+[data-theme="light"] .confirm-section {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(124,58,237,.10), transparent 28%),
+    radial-gradient(circle at 88% 75%, rgba(37,99,235,.08), transparent 30%),
+    #f7f7fb;
+}
+
+[data-theme="light"] .confirm-section .glow {
+  opacity: .18;
+}
+
+[data-theme="light"] .confirm-left {
+  color: #18181b;
+}
+
+[data-theme="light"] .success-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+[data-theme="light"] .confirm-left p {
+  color: #71717a;
+}
+
+[data-theme="light"] .btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(37,99,235,.18);
+}
+
+[data-theme="light"] .btn-primary:hover {
+  background: #1d4ed8;
+}
+
+[data-theme="light"] .btn-link {
+  color: #52525b;
+}
+
+[data-theme="light"] .ticket-card {
+  background: #ffffff;
+  color: #18181b;
+  border-top-color: var(--accent);
+  box-shadow: 0 20px 60px rgba(24,24,27,.13);
+}
+
+[data-theme="light"] .ticket-amount-label,
+[data-theme="light"] .ticket-row span:first-child {
+  color: #71717a;
+}
+
+[data-theme="light"] .ticket-divider {
+  background: #e4e4e7;
+}
+
+[data-theme="light"] .ticket-section h3,
+[data-theme="light"] .qr-section p {
+  color: #a1a1aa;
+}
+
+[data-theme="light"] .ticket-perforation {
+  background: #f7f7fb;
+}
+[data-theme="light"] .ticket-stub-divider::before{
+  content: "";
+  position: absolute;
+  left: -13.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f7f7fb;
+  transform: translateY(-50%);
+}
+[data-theme="light"] .ticket-stub-divider::after {
+  content: "";
+  position: absolute;
+  left: -13.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f7f7fb;
+  transform: translateY(-50%);
+}
+
+
+[data-theme="light"] .empty-state {
+  color: #18181b;
+}
+
+[data-theme="light"] .empty-state p {
+  color: #71717a;
+}
+
+[data-theme="light"] .form-error {
+  color: #dc2626;
+}
