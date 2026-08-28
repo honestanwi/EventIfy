@@ -13,7 +13,7 @@ function updateThemeIcon() {
 
   const currentTheme = document.documentElement.getAttribute("data-theme");
 
-  themeToggle.textContent = currentTheme === "light" ? "☀️" : "🌙";
+  themeToggle.textContent = currentTheme === "light" ? "🌙" : "☀️";
 }
 
 if (themeToggle) {
