@@ -261,11 +261,15 @@ font-family: var(--header-font);
     box-shadow:
         0 8px 30px rgba(139, 92, 246, 0.35);
 }
-
-
-/* =========================
-   MOBILE
-========================= */
+.extra-attendees-note{
+    margin-bottom: 2rem;
+    color: #fafafa;
+}
+.attendee-registration-header{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fafafa;
+}
 
 @media (max-width: 700px) {
 
@@ -432,6 +436,10 @@ font-family: var(--header-font);
   color: #ffffff;
   background: #7c3aed;
   box-shadow: 0 8px 25px rgba(124, 58, 237, 0.22);
+}
+[data-theme="light"] .extra-attendees-note, 
+.attendee-registration-header{
+   color: #18181b;
 }
 
 [data-theme="light"] .register-form button:hover {

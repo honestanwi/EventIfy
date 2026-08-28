@@ -1,95 +1,243 @@
-// registration.js
-// Captures the purchaser's details on submit. If the booking covers more
-// than one attendee, additional name-only fields are generated dynamically
-// (one ticket = one name; contact info and payment stay with the
-// purchaser). Ticket count and event context currently come from the URL,
-// e.g.:
-//   registration.html?tickets=3&eventType=tech&eventName=DevCon+2026&amount=79.99
-// Once the booking page exists, it should link here with those same params
-// (quantity selected there becomes `tickets`).
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registerForm");
+
   if (!form) return;
 
   const formError = document.getElementById("formError");
+
   const extraAttendeesEl = document.getElementById("extraAttendees");
-  const params = new URLSearchParams(window.location.search);
 
-  const ticketCount = Math.max(1, parseInt(params.get("tickets"), 10) || 1);
+  const pendingBooking = JSON.parse(
+    localStorage.getItem("eventifyPendingBooking") || "null",
+  );
 
-  // Build one extra name field per additional ticket. The first
-  // attendee's name is already covered by the "Your Name" field above.
-  if (ticketCount > 1) {
-    const note = document.createElement("p");
-    note.className = "extra-attendees-note";
-    note.textContent = `This booking includes ${ticketCount} tickets. Enter a name for each additional attendee below — one ticket will be issued per name.`;
-    extraAttendeesEl.parentElement.insertBefore(note, extraAttendeesEl);
+  if (
+    !pendingBooking ||
+    !Array.isArray(pendingBooking.cart) ||
+    pendingBooking.cart.length === 0
+  ) {
+    window.location.href = "booking.html";
 
-    for (let i = 2; i <= ticketCount; i++) {
-      const input = document.createElement("input");
-      input.type = "text";
-      input.className = "extra-attendee-input";
-      input.dataset.attendeeIndex = String(i);
-      input.placeholder = `Attendee ${i} Name`;
-      input.required = true;
-      extraAttendeesEl.appendChild(input);
-    }
+    return;
   }
+
+  const cart = pendingBooking.cart;
+
+  const attendeeTickets = [];
+
+  cart.forEach((item, eventIndex) => {
+    for (let i = 0; i < item.quantity; i++) {
+      attendeeTickets.push({
+        eventIndex,
+        eventName: item.eventName,
+        ticketTier: item.ticketTier,
+        unitPrice: item.unitPrice,
+      });
+    }
+  });
+
+  const note = document.createElement("p");
+
+  note.className = "extra-attendees-note";
+
+  note.textContent = `Your booking contains ${attendeeTickets.length} ticket${attendeeTickets.length === 1 ? "" : "s"}. Enter the details for each attendee.`;
+
+  extraAttendeesEl.parentElement.insertBefore(note, extraAttendeesEl);
+
+  attendeeTickets.forEach((ticket, index) => {
+    const wrapper = document.createElement("div");
+
+    wrapper.className = "attendee-registration";
+
+    wrapper.innerHTML = `
+
+      <div class="attendee-registration-header">
+
+        <span>
+          Attendee ${index + 1} ·
+        </span>
+
+        <small>
+          ${ticket.eventName}
+          ·
+          ${ticket.ticketTier}
+        </small>
+
+      </div>
+
+<div class="input-group">
+      <input
+        type="text"
+        class="attendee-input"
+        data-attendee-index="${index}"
+        placeholder="Full name"
+        required
+      />
+
+
+      <input
+        type="email"
+        class="attendee-input"
+        data-attendee-index="${index}"
+        placeholder="Email address"
+        required
+      />
+
+
+      <input
+        type="tel"
+        class="attendee-input"
+        data-attendee-index="${index}"
+        placeholder="Phone number"
+        required
+      /> </div>
+
+    `;
+
+    extraAttendeesEl.appendChild(wrapper);
+  });
+
+  /* ======================================
+     SUBMIT
+  ====================================== */
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const address = document.getElementById("address").value.trim();
+    const purchaser = {
+      fullName: document.getElementById("fullName").value.trim(),
 
-    const extraInputs = Array.from(
-      extraAttendeesEl.querySelectorAll(".extra-attendee-input"),
+      email: document.getElementById("email").value.trim(),
+
+      phone: document.getElementById("phone").value.trim(),
+
+      address: document.getElementById("address").value.trim(),
+    };
+
+    const attendeeWrappers = Array.from(
+      document.querySelectorAll(".attendee-registration"),
     );
-    const extraNames = extraInputs.map((input) => input.value.trim());
 
-    const allFilled =
-      fullName && email && phone && address && extraNames.every(Boolean);
+    const attendees = attendeeWrappers.map((wrapper, index) => {
+      const inputs = wrapper.querySelectorAll(".attendee-input");
 
-    if (!allFilled) {
-      if (formError) formError.hidden = false;
+      return {
+        attendeeName: inputs[0].value.trim(),
+
+        attendeeEmail: inputs[1].value.trim(),
+
+        attendeePhone: inputs[2].value.trim(),
+
+        eventIndex: attendeeTickets[index].eventIndex,
+
+        eventName: attendeeTickets[index].eventName,
+
+        ticketTier: attendeeTickets[index].ticketTier,
+      };
+    });
+
+    const everythingFilled =
+      purchaser.fullName &&
+      purchaser.email &&
+      purchaser.phone &&
+      purchaser.address &&
+      attendees.every(
+        (attendee) =>
+          attendee.attendeeName &&
+          attendee.attendeeEmail &&
+          attendee.attendeePhone,
+      );
+
+    if (!everythingFilled) {
+      formError.hidden = false;
+
       return;
     }
-    if (formError) formError.hidden = true;
+
+    formError.hidden = true;
 
     const referenceNumber =
       "EVT-" + Math.floor(100000000 + Math.random() * 900000000);
 
-    const attendeeNames = [fullName, ...extraNames];
-    const tickets = attendeeNames.map((attendeeName, i) => ({
-      attendeeName,
-      ticketRef: `${referenceNumber}-${i + 1}`,
-    }));
+    /*
+      Create individual ticket references.
+    */
+
+    attendees.forEach((attendee, index) => {
+      attendee.ticketRef = `${referenceNumber}-${String(index + 1).padStart(2, "0")}`;
+    });
+
+    /*
+      Group attendee records back into events.
+    */
+
+    const events = cart.map((eventItem, eventIndex) => {
+      const eventAttendees = attendees.filter(
+        (attendee) => attendee.eventIndex === eventIndex,
+      );
+
+      const eventTotal = eventItem.unitPrice * eventItem.quantity;
+
+      return {
+        eventId: eventItem.eventId,
+
+        eventName: eventItem.eventName,
+
+        eventType: eventItem.eventType,
+
+        eventDate: eventItem.eventDate,
+
+        eventTime: eventItem.eventTime,
+
+        eventVenue: eventItem.eventVenue,
+
+        eventLocation: eventItem.eventLocation,
+
+        eventImage: eventItem.eventImage,
+
+        ticketTier: eventItem.ticketTier,
+
+        unitPrice: eventItem.unitPrice,
+
+        quantity: eventItem.quantity,
+
+        total: eventTotal,
+
+        currency: eventItem.currency,
+
+        attendees: eventAttendees,
+      };
+    });
 
     const registration = {
-      purchaser: { fullName, email, phone, address },
+      purchaser,
 
-      // event context (from URL params once the event/booking pages pass
-      // them along; falls back to demo values for now)
-      eventType: (params.get("eventType") || "conference").toLowerCase(),
-      eventName: params.get("eventName") || "Eventify Summit 2026",
-      eventDate: params.get("eventDate") || "Sep 12, 2026 · 10:00 AM",
-      eventVenue: params.get("eventVenue") || "Main Convention Hall, Lagos",
-      ticketTier: params.get("ticketTier") || "Standard",
+      events,
 
-      // payment (from URL params once the booking page passes them along)
-      amount: params.get("amount") || "49.99",
-      paymentMethod: params.get("paymentMethod") || "Credit Card",
+      total: pendingBooking.total,
+
+      ticketCount: pendingBooking.ticketCount,
+
+      paymentMethod: pendingBooking.method,
+
       paymentStatus: "Success",
 
       referenceNumber,
+
       submittedAt: new Date().toISOString(),
-      tickets,
     };
 
     localStorage.setItem("eventifyRegistration", JSON.stringify(registration));
+
+    /*
+      Booking has now been completed.
+      Clear the temporary cart.
+    */
+
+    localStorage.removeItem("eventifyCart");
+
+    localStorage.removeItem("eventifyPendingBooking");
+
     window.location.href = "confirmation.html";
   });
 });

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EventIfy | Booking</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/svg/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/booking.css" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+
+    <script defer src="../js/index.js"></script>
+    <script defer src="../js/booking.js"></script>
+    <script defer src="../js/theme.js"></script>
+  </head>
+
+  <body>
+    <nav id="nav-bar">
+      <div class="nav-inner">
+        <div class="logo">
+          <div class="logo-img"></div>
+          <h4>Event <span>Ify</span></h4>
+        </div>
+
+        <button
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+
+        <ul id="menu">
+          <li class="list">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li class="list">
+            <a href="event.html">Events</a>
+          </li>
+
+          <li class="list">
+            <a href="booking.html">Booking</a>
+          </li>
+
+          <li class="list">
+            <a class="ghost-btn" href="registration.html"> Registration </a>
+          </li>
+
+          <li class="list">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle light and dark mode"
+            >
+              🌙
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="booking-page">
+      <section class="booking-header">
+        <span class="booking-eyebrow">YOUR RESERVATION</span>
+
+        <h1>Complete your booking</h1>
+
+        <p>Review your tickets and choose your preferred payment method.</p>
+      </section>
+
+      <section class="booking-layout">
+        <!-- LEFT -->
+        <div class="booking-left">
+          <div class="section-heading">
+            <div>
+              <h2>Your tickets</h2>
+              <p id="ticket-count-text">0 tickets</p>
+            </div>
+          </div>
+
+          <div id="booking-items"></div>
+
+          <div class="continue-shopping">
+            <a href="event.html"> ← Continue exploring events </a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="payment-card">
+          <div class="payment-heading">
+            <span>ORDER SUMMARY</span>
+            <h2>Payment</h2>
+          </div>
+
+          <div id="payment-summary"></div>
+
+          <div class="total-row">
+            <span>Total</span>
+
+            <strong id="grand-total"> 0 XAF </strong>
+          </div>
+
+          <div class="payment-method-section">
+            <h3>Payment method</h3>
+
+            <div class="payment-methods">
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Visa" />
+
+                <span class="payment-option-content">
+                  <span class="payment-icon">💳</span>
+                  <span>Visa</span>
+                </span>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Mastercard" />
+
+                <span class="payment-option-content">
+                  <span class="payment-icon">💳</span>
+                  <span>Mastercard</span>
+                </span>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="MTN MoMo" />
+
+                <span class="payment-option-content">
+                  <span class="payment-icon">📱</span>
+                  <span>MTN MoMo</span>
+                </span>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Orange Money" />
+
+                <span class="payment-option-content">
+                  <span class="payment-icon">📱</span>
+                  <span>Orange Money</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <p class="payment-error" id="payment-error" hidden>
+            Please select a payment method.
+          </p>
+
+          <button
+            type="button"
+            id="confirm-payment"
+            class="confirm-payment-btn"
+          >
+            Confirm Payment
+          </button>
+
+          <p class="secure-note">
+            🔒 Your booking information is securely stored on this device.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-img"></div>
+            <h4>Event <span>Ify</span></h4>
+          </div>
+
+          <p>
+            The modern platform for discovering and booking experiences that
+            matter.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Discover</h4>
+
+          <ul>
+            <li>
+              <a href="event.html">Events near you</a>
+            </li>
+
+            <li>
+              <a href="event.html">Trending</a>
+            </li>
+
+            <li>
+              <a href="booking.html">Booking</a>
+            </li>
+
+            <li>
+              <a href="registration.html">Registration</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+
+          <div class="socials">
+            <div class="socials-links">
+              <a href="#">
+                <img
+                  src="../assets/images/svg/instagram-icon.svg"
+                  alt="Instagram"
+                />
+              </a>
+
+              <a href="#">
+                <img
+                  src="../assets/images/svg/facebook-icon.svg"
+                  alt="Facebook"
+                />
+              </a>
+
+              <a href="#">
+                <img
+                  src="../assets/images/svg/X (formerly Twitter)_light.svg"
+                  alt="X"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Eventify. All rights reserved.</span>
+        <span>Privacy · Terms · Cookies</span>
+      </div>
+
+      <h1 class="ghost">EVENT IFY</h1>
+    </footer>
+  </body>
+</html>

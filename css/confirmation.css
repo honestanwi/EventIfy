@@ -111,7 +111,111 @@ body{
   max-width: 40ch;
   margin-bottom: 2rem;
 }
+.confirmation-receipts-heading {
+  margin-bottom: 1.2rem;
+}
 
+.confirmation-receipts-heading span {
+  display: block;
+  margin-bottom: 0.4rem;
+
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.confirmation-receipts-heading h2 {
+  font-family: var(--header-font);
+}
+
+
+.receipts-container {
+  display: grid;
+  gap: 1.2rem;
+}
+
+
+.dynamic-receipt {
+  width: 100%;
+}
+
+
+.receipt-event-header {
+  margin-bottom: 1rem;
+}
+
+
+.receipt-event-header h2 {
+  margin-bottom: 0.4rem;
+  font-family: var(--header-font);
+  font-size: 1.2rem;
+}
+
+
+.receipt-event-header p {
+  margin: 0.2rem 0;
+
+  color: var(--muted, #a6a6b0);
+  font-size: 0.8rem;
+}
+
+
+.receipt-attendees {
+  display: grid;
+  gap: 0.7rem;
+}
+
+
+.receipt-attendee {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 0.8rem;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+.receipt-attendee span {
+  display: block;
+
+  margin-bottom: 0.2rem;
+
+  color: var(--muted, #a6a6b0);
+  font-size: 0.65rem;
+}
+
+
+.receipt-attendee strong {
+  display: block;
+  font-size: 0.8rem;
+}
+
+
+.receipt-attendee small {
+  display: block;
+
+  color: var(--muted, #a6a6b0);
+  font-size: 0.65rem;
+}
+
+
+[data-theme="light"] .receipt-attendee {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+
+@media (max-width: 500px) {
+
+  .receipt-attendee {
+    flex-direction: column;
+  }
+
+}
 .confirm-actions { display: flex; align-items: center; gap: 1.5rem; }
 
 .btn-primary {
