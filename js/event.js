@@ -146,6 +146,7 @@ function filterAndDisplayEvents() {
       </div>
     `;
 
+    artCards.innerHTML = "";
     concertCards.innerHTML = "";
     sportCards.innerHTML = "";
     techCards.innerHTML = "";
@@ -153,7 +154,7 @@ function filterAndDisplayEvents() {
 
     return;
   }
-
+  noResult.innerHTML = "";
   // Separate filtered events by category
   const artEvents = filteredEvents.filter((event) => event.category === "Arts");
 
@@ -261,6 +262,10 @@ searchInput.addEventListener("input", () => {
 cityFilter.addEventListener("change", () => {
   filterAndDisplayEvents();
 });
+dateFilter.addEventListener("change", () => {
+  filterAndDisplayEvents();
+});
+
 function createDateOptions() {
   // Get unique dates
   const dates = [...new Set(allEvents.map((event) => event.date))];

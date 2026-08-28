@@ -10,101 +10,361 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const content = document.getElementById("confirmationContent");
+
   const emptyState = document.getElementById("emptyState");
 
-  if (!data || !Array.isArray(data.tickets) || data.tickets.length === 0) {
+  if (!data || !Array.isArray(data.events) || data.events.length === 0) {
     content.hidden = true;
+
     emptyState.hidden = false;
+
     return;
   }
 
-  const $ = (id) => document.getElementById(id);
+  const summaryText = document.getElementById("summaryText");
 
-  // --- intro text ---------------------------------------------------
-  $("summaryText").textContent =
-    `Thanks, ${data.purchaser.fullName}! A confirmation has been sent to ` +
-    `${data.purchaser.email}. ${data.tickets.length > 1 ? "Your tickets are" : "Your ticket is"} ready below.`;
+  summaryText.textContent = `Thanks, ${data.purchaser.fullName}! Your booking has been confirmed. ${data.ticketCount} ticket${data.ticketCount === 1 ? "" : "s"} have been issued.`;
 
-  // --- receipt: purchaser + payment (shared across all tickets) -----
-  $("ticketAttendeeName").textContent = data.purchaser.fullName;
-  $("ticketAttendeeEmail").textContent = data.purchaser.email;
-  $("ticketAttendeePhone").textContent = data.purchaser.phone;
-  $("ticketAttendeeAddress").textContent = data.purchaser.address;
+  /*
+    We no longer use the old single receipt.
+    Instead we generate one receipt for every event.
+  */
 
-  $("amountDisplay").textContent = `$${data.amount}`;
-  $("amountRow").textContent = `$${data.amount}`;
-  $("paymentDate").textContent = new Date(data.submittedAt).toLocaleString();
-  $("referenceNumber").textContent = data.referenceNumber;
-  $("ticketCountRow").textContent =
-    `${data.tickets.length} × ${data.ticketTier}`;
-  $("paymentMethod").textContent = data.paymentMethod;
-  $("paymentStatus").textContent = data.paymentStatus;
+  const oldReceipt = document.getElementById("receiptCard");
 
-  const receiptCard = $("receiptCard");
-  receiptCard.classList.add(`ticket-${data.eventType}`);
-  $("categoryBadge").textContent =
-    data.eventType.charAt(0).toUpperCase() + data.eventType.slice(1);
+  if (oldReceipt) {
+    oldReceipt.remove();
+  }
 
-  // --- tickets: one stub per attendee --------------------------------
-  const template = $("ticketStubTemplate");
-  const container = $("ticketsContainer");
-  const stubEls = [];
+  const confirmRight = document.querySelector(".confirm-right");
 
-  data.tickets.forEach((ticket) => {
-    const node = template.content.cloneNode(true);
-    const stub = node.querySelector(".ticket-stub");
+  const receiptHeading = document.createElement("div");
 
-    stub.classList.add(`ticket-${data.eventType}`);
-    stub.querySelector('[data-field="eventName"]').textContent = data.eventName;
-    stub.querySelector('[data-field="eventDate"]').textContent = data.eventDate;
-    stub.querySelector('[data-field="eventVenue"]').textContent =
-      data.eventVenue;
-    stub.querySelector('[data-field="attendeeName"]').textContent =
-      ticket.attendeeName;
-    stub.querySelector('[data-field="ticketTier"]').textContent =
-      data.ticketTier;
-    stub.querySelector('[data-field="ticketRef"]').textContent =
-      ticket.ticketRef;
+  receiptHeading.className = "confirmation-receipts-heading";
 
-    // QR encodes enough for a scanner to verify this specific ticket
-    const qrPayload = encodeURIComponent(
-      JSON.stringify({
-        ref: ticket.ticketRef,
-        name: ticket.attendeeName,
-        event: data.eventName,
-        tier: data.ticketTier,
-      }),
-    );
-    const qrImg = stub.querySelector('[data-field="qrCode"]');
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${qrPayload}`;
+  receiptHeading.innerHTML = `
+    <span>PAYMENT RECEIPTS</span>
+    <h2>Your booking details</h2>
+  `;
 
-    const downloadBtn = stub.querySelector('[data-action="download"]');
-    downloadBtn.addEventListener("click", () =>
-      downloadStub(stub, ticket.ticketRef),
-    );
+  confirmRight.prepend(receiptHeading);
 
-    container.appendChild(node);
-    stubEls.push(stub);
+  const receiptsContainer = document.createElement("div");
+
+  receiptsContainer.id = "receiptsContainer";
+
+  receiptsContainer.className = "receipts-container";
+
+  confirmRight.appendChild(receiptsContainer);
+
+  /*
+    One receipt per event.
+  */
+
+  data.events.forEach((event, eventIndex) => {
+    const receipt = document.createElement("article");
+
+    receipt.className = "receipt-card dynamic-receipt";
+
+    const attendeeList = event.attendees
+      .map(
+        (attendee, index) => `
+              <div class="receipt-attendee">
+
+                <div>
+                  <span>Attendee ${index + 1}</span>
+
+                  <strong>
+                    ${attendee.attendeeName}
+                  </strong>
+                </div>
+
+                <div>
+                  <small>
+                    ${attendee.attendeeEmail}
+                  </small>
+
+                  <small>
+                    ${attendee.attendeePhone}
+                  </small>
+                </div>
+
+              </div>
+            `,
+      )
+      .join("");
+
+    receipt.innerHTML = `
+
+        <span class="category-badge">
+          ${event.eventType}
+        </span>
+
+
+        <div class="receipt-event-header">
+
+          <div>
+
+            <h2>
+              ${event.eventName}
+            </h2>
+
+            <p>
+              ${event.eventDate}
+              ·
+              ${event.eventTime}
+            </p>
+
+            <p>
+              📍 ${event.eventVenue},
+              ${event.eventLocation}
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="ticket-amount-row">
+
+          <div>
+
+            <div class="ticket-amount">
+              ${Number(event.total).toLocaleString()}
+              ${event.currency}
+            </div>
+
+            <div class="ticket-amount-label">
+              Payment success!
+            </div>
+
+          </div>
+
+          <div class="ticket-check">
+            ✓
+          </div>
+
+        </div>
+
+
+        <div class="ticket-divider"></div>
+
+
+        <div class="ticket-section">
+
+          <h3>Ticket details</h3>
+
+
+          <div class="ticket-row">
+
+            <span>Ticket type</span>
+
+            <span>
+              ${event.ticketTier}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Number of tickets</span>
+
+            <span>
+              ${event.quantity}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Price per ticket</span>
+
+            <span>
+              ${Number(event.unitPrice).toLocaleString()}
+              ${event.currency}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Event total</span>
+
+            <strong>
+              ${Number(event.total).toLocaleString()}
+              ${event.currency}
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="ticket-section">
+
+          <h3>Attendees</h3>
+
+          <div class="receipt-attendees">
+
+            ${attendeeList}
+
+          </div>
+
+        </div>
+
+
+        <div class="ticket-section">
+
+          <h3>Payment details</h3>
+
+
+          <div class="ticket-row">
+
+            <span>Payment method</span>
+
+            <span>
+              ${data.paymentMethod}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Reference</span>
+
+            <span>
+              ${data.referenceNumber}-${eventIndex + 1}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Status</span>
+
+            <span class="status-success">
+              ${data.paymentStatus}
+            </span>
+
+          </div>
+
+
+          <div class="ticket-row">
+
+            <span>Date</span>
+
+            <span>
+              ${new Date(data.submittedAt).toLocaleString()}
+            </span>
+
+          </div>
+
+        </div>
+
+      `;
+
+    receiptsContainer.appendChild(receipt);
   });
 
-  $("downloadAllBtn").addEventListener("click", () => {
-    stubEls.forEach((stub, i) => {
-      setTimeout(() => downloadStub(stub, data.tickets[i].ticketRef), i * 400);
+  /*
+    Ticket stubs
+    One ticket = one attendee.
+  */
+
+  const ticketsContainer = document.getElementById("ticketsContainer");
+
+  const template = document.getElementById("ticketStubTemplate");
+
+  const allTicketElements = [];
+
+  data.events.forEach((event) => {
+    event.attendees.forEach((attendee) => {
+      const node = template.content.cloneNode(true);
+
+      const stub = node.querySelector(".ticket-stub");
+
+      stub.querySelector('[data-field="eventName"]').textContent =
+        event.eventName;
+
+      stub.querySelector('[data-field="eventDate"]').textContent =
+        `${event.eventDate} · ${event.eventTime}`;
+
+      stub.querySelector('[data-field="eventVenue"]').textContent =
+        `${event.eventVenue}, ${event.eventLocation}`;
+
+      stub.querySelector('[data-field="attendeeName"]').textContent =
+        attendee.attendeeName;
+
+      stub.querySelector('[data-field="ticketTier"]').textContent =
+        event.ticketTier;
+
+      stub.querySelector('[data-field="ticketRef"]').textContent =
+        attendee.ticketRef;
+
+      const qrPayload = encodeURIComponent(
+        JSON.stringify({
+          ref: attendee.ticketRef,
+
+          name: attendee.attendeeName,
+
+          event: event.eventName,
+
+          tier: event.ticketTier,
+        }),
+      );
+
+      const qr = stub.querySelector('[data-field="qrCode"]');
+
+      qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${qrPayload}`;
+
+      const downloadButton = stub.querySelector('[data-action="download"]');
+
+      downloadButton.addEventListener("click", () =>
+        downloadStub(stub, attendee.ticketRef),
+      );
+
+      ticketsContainer.appendChild(node);
+
+      allTicketElements.push({
+        element: stub,
+        ref: attendee.ticketRef,
+      });
     });
   });
 
-  function downloadStub(stub, ref) {
+  const downloadAll = document.getElementById("downloadAllBtn");
+
+  downloadAll.addEventListener("click", () => {
+    allTicketElements.forEach((ticket, index) => {
+      setTimeout(() => {
+        downloadStub(ticket.element, ticket.ref);
+      }, index * 400);
+    });
+  });
+
+  function downloadStub(stub, reference) {
     if (typeof html2canvas === "undefined") {
       window.print();
+
       return;
     }
-    html2canvas(stub, { backgroundColor: "#ffffff", scale: 2 }).then(
-      (canvas) => {
-        const link = document.createElement("a");
-        link.download = `${ref}-ticket.png`;
-        link.href = canvas.toDataURL("image/png");
-        link.click();
-      },
-    );
+
+    html2canvas(stub, {
+      backgroundColor: "#ffffff",
+      scale: 2,
+    }).then((canvas) => {
+      const link = document.createElement("a");
+
+      link.download = `${reference}-ticket.png`;
+
+      link.href = canvas.toDataURL("image/png");
+
+      link.click();
+    });
   }
 });

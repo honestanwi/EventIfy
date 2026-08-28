@@ -67,21 +67,79 @@ function renderTicketTypes(event) {
   grid.innerHTML = event.ticketTypes
     .map((ticket, i) => {
       const isVip = i === event.ticketTypes.length - 1;
+
       return `
-      <div class="ticket-type-card ${isVip ? "featured" : ""}">
-        <h3 class="ticket-type-name">${ticket.name}</h3>
-        <p class="ticket-type-price">
-          <span class="amount">${ticket.price.toLocaleString()}</span>
-          <small>${event.currency}</small>
-        </p>
-        <ul class="ticket-type-benefits">
-          ${ticket.benefits.map((b) => `<li>${b}</li>`).join("")}
-        </ul>
-        <button class="ticket-select-btn">Select ${ticket.name}</button>
-      </div>
-    `;
+        <div class="ticket-type-card ${isVip ? "featured" : ""}">
+          <h3 class="ticket-type-name">${ticket.name}</h3>
+
+          <p class="ticket-type-price">
+            <span class="amount">${ticket.price.toLocaleString()}</span>
+            <small>${event.currency}</small>
+          </p>
+
+          <ul class="ticket-type-benefits">
+            ${ticket.benefits.map((b) => `<li>${b}</li>`).join("")}
+          </ul>
+
+          <button
+            class="ticket-select-btn"
+            data-ticket-name="${ticket.name}"
+            data-ticket-price="${ticket.price}"
+          >
+            Select ${ticket.name}
+          </button>
+        </div>
+      `;
     })
     .join("");
+
+  grid.querySelectorAll(".ticket-select-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const ticketName = button.dataset.ticketName;
+      const ticketPrice = Number(button.dataset.ticketPrice);
+
+      addToBookingCart(event, ticketName, ticketPrice);
+    });
+  });
+}
+
+/* ==========================================
+   BOOKING CART
+========================================== */
+
+function addToBookingCart(event, ticketName, ticketPrice) {
+  const cart = JSON.parse(localStorage.getItem("eventifyCart") || "[]");
+
+  const existing = cart.find(
+    (item) =>
+      String(item.eventId) === String(event.id) &&
+      item.ticketTier === ticketName,
+  );
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      eventId: event.id,
+      eventName: event.title,
+      eventType: event.category,
+      eventDate: formatDate(event.date),
+      eventTime: event.time,
+      eventVenue: event.venue,
+      eventLocation: event.location,
+      eventImage: event.image,
+      currency: event.currency || "XAF",
+
+      ticketTier: ticketName,
+      unitPrice: ticketPrice,
+      quantity: 1,
+    });
+  }
+
+  localStorage.setItem("eventifyCart", JSON.stringify(cart));
+
+  // Go to booking page
+  window.location.href = "booking.html";
 }
 
 function formatDate(date) {

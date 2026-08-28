@@ -355,8 +355,8 @@ body {
   transition: transform 0.3s ease, scale 0.3s ease;
 }
 .event-image:hover{
-  transform: translateY(-3px);
-  /* /* transform: scale(1.02); *  / */
+  /* transform: translateY(-3px); */
+ transform: scale(1.1); 
 }
 
 /* Dots sit on the boundary between the image and the card content. */
@@ -827,7 +827,7 @@ body {
 [data-theme="light"] body {
     background: #f5f5f7;
     color: #18181b;
-    margin: 0 -20px;
+    /* margin: 0 -20px; */
 }
 
 
